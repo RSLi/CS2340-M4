@@ -19,10 +19,20 @@ public class WelcomeActivity extends AppCompatActivity {
                 goToLogin();
             }
         });
+        btnGotoRegistration.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToRegister();
+            }
+        });
     }
 
     public void goToLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToRegister() {
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }
