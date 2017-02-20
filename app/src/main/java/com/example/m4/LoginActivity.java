@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity
 
                 //Hardcoded credentials
                 if (inputUsername.equals("user") && inputPass.equals("pass")) {
-                    Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainAppActivity.class);
                     startActivity(intent);
                 } else {
                     new AlertDialog.Builder(LoginActivity.this)
