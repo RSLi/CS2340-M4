@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "foo:hello", "bar:world"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -57,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private UserLoginTask mAuthTask = null;
 
     // UI references.
-    private AutoCompleteTextView mUserView;
+    private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
@@ -192,7 +192,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return true;
     }
 
     private boolean isPasswordValid(String password) {
