@@ -1,13 +1,17 @@
-package com.example.m4;
+package com.example.m4.models;
 
 /**
  * Created by sli474 on 2/12/17.
  */
 
-public class User
+public class User implements AccountType
 {
     private String username;
     private String password;
+
+    public User() {
+        this("dummy_username", "dummy_password");
+    }
 
     public User(String username, String password) {
         this.username = username;
