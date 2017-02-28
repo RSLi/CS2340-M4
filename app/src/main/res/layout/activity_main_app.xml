@@ -29,4 +29,13 @@
         android:layout_alignEnd="@+id/login_success"
         android:layout_marginTop="127dp" />
 
+    <Button
+        android:text="User Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:id="@+id/btn_user_profile"
+        android:layout_alignBottom="@+id/button_logout"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

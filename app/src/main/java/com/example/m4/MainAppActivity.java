@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.m4.models.Models;
+
 public class MainAppActivity extends AppCompatActivity {
 
     @Override
@@ -13,11 +15,22 @@ public class MainAppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_app);
 
+        Button mBtnUserProfile = (Button) findViewById(R.id.btn_user_profile);
         Button mBtnLogout = (Button) findViewById(R.id.button_logout);
+
+
+        mBtnUserProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainAppActivity.this, UserProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mBtnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Models.logout();
                 Intent intent = new Intent(MainAppActivity.this, WelcomeActivity.class);
                 startActivity(intent);
             }
