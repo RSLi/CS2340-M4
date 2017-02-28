@@ -1,7 +1,7 @@
 package com.example.m4.models;
 
 /**
- * Created by sli474 on 2/12/17.
+ * Created by RSLi on 2/12/17.
  */
 
 public class User implements AccountType
@@ -18,18 +18,27 @@ public class User implements AccountType
         this.password = password;
     }
 
+    @Override
+    public boolean isValid() {
+        return false;
+    }
+
+    @Override
     public String getUsername() {
         return username;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
 
+    @Override
     public void setUsername(String username) {
         this.username = username;
     }
 
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }
@@ -37,5 +46,6 @@ public class User implements AccountType
     public boolean isValidPassword(String input) {
         return password.equals(input);
     }
+
 
 }

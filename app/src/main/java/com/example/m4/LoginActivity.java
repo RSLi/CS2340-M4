@@ -32,6 +32,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.m4.models.Models;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,8 +67,8 @@ public class LoginActivity extends AppCompatActivity
                 String inputUsername = mUsernameView.getText().toString();
                 String inputPass = mPasswordView.getText().toString();
 
-                //Hardcoded credentials
-                if (inputUsername.equals("user") && inputPass.equals("pass")) {
+
+                if (Models.login(inputUsername, inputPass)) {
                     Intent intent = new Intent(LoginActivity.this, MainAppActivity.class);
                     startActivity(intent);
                 } else {

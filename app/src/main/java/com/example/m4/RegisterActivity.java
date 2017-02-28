@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -29,6 +30,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.m4.models.AccountType;
+import com.example.m4.models.Administrator;
+import com.example.m4.models.Manager;
+import com.example.m4.models.Models;
+import com.example.m4.models.User;
+import com.example.m4.models.Worker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,8 +107,41 @@ public class RegisterActivity extends AppCompatActivity {
         mProgressView = findViewById(R.id.login_progress);
     }
 
+    /**
+     * Registration Logic when clicking register button
+     */
     private void attemptRegister() {
+        //TODO: Better Validation in the future
+        String username = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+        String accountType = mAccountTypeSpinner.getSelectedItem().toString();
+        AccountType newAccount = new User();
 
+        if (accountType.equals("Administrator")) {
+            newAccount = new Administrator();
+        } else if (accountType.equals("Worker")) {
+            newAccount = new Worker();
+        } else if (accountType.equals("Manager")) {
+            newAccount = new Manager();
+        } else {
+            newAccount = new User();
+        }
+
+        newAccount.setUsername(username);
+        newAccount.setPassword(password);
+
+        boolean registerSuccess = Models.register(newAccount);
+
+        // Make an alert dialog to indicate registration status
+        if (registerSuccess) {
+            new AlertDialog.Builder(RegisterActivity.this)
+                    .setTitle("Register Success")
+                    .setMessage("Go to login screen to proceed").show();
+        } else {
+            new AlertDialog.Builder(RegisterActivity.this)
+                    .setTitle("Register Failure")
+                    .setMessage("Please try different username/password and then proceed").show();
+        }
     }
 
 }
