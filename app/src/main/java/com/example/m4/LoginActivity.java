@@ -79,9 +79,18 @@ public class LoginActivity extends AppCompatActivity
                 }
             }
         });
-
+        //button for cancelling registration
+        Button btnCancelLogin = (Button)findViewById(R.id.btn_cancelLogin);
+        btnCancelLogin.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                cancelLogin();
+            }
+        });
     }
 
-
+    public void cancelLogin() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+    }
 }
 
