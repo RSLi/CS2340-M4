@@ -3,6 +3,7 @@ package com.example.m4;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -94,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mAccountTypeSpinner.setAdapter(adapter);
-
+        //button for register
         Button mEmailSignInButton = (Button) findViewById(R.id.btn_register);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -105,6 +106,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        //button for cancelling registration
+        Button btnGotoWelcome = (Button)findViewById(R.id.btn_goToWelcome);
+        btnGotoWelcome.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                gotoWelcome();
+            }
+        });
     }
 
     /**
@@ -142,6 +151,11 @@ public class RegisterActivity extends AppCompatActivity {
                     .setTitle("Register Failure")
                     .setMessage("Please try different username/password and then proceed").show();
         }
+    }
+    //method for going to the welcome page
+    public void gotoWelcome() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
     }
 
 }

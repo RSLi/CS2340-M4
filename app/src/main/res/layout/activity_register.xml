@@ -68,16 +68,21 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
+                <Button
+                    android:id="@+id/btn_register"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_sign_in"
+                    android:textStyle="bold"
+                    tools:text="Register" />
+
             <Button
-                android:id="@+id/btn_register"
-                style="?android:textAppearanceSmall"
+                android:text="Cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold"
-                tools:text="Register" />
-
+                android:id="@+id/btn_goToWelcome" />
 
         </LinearLayout>
     </ScrollView>
