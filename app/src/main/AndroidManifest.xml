@@ -24,8 +24,8 @@
         <activity
             android:name=".MainAppActivity"
             android:label="loginSuccesful"/>
-        <activity android:name=".UserProfileActivity">
+        <activity android:name=".ViewProfileActivity">
         </activity>
+        <activity android:name=".EditProfileActivity"/>
     </application>
-
 </manifest>

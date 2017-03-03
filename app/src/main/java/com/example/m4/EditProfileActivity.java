@@ -11,7 +11,7 @@ import com.example.m4.models.Models;
 
 import java.util.HashMap;
 
-public class UserProfileActivity extends AppCompatActivity
+public class EditProfileActivity extends AppCompatActivity
 {
     EditText mFieldProfileEmail;
     EditText mFieldProfileAddress;
@@ -22,7 +22,7 @@ public class UserProfileActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_edit_profile);
 
         mFieldProfileEmail = (EditText) findViewById(R.id.field_profile_email);
         mFieldProfileAddress = (EditText) findViewById(R.id.field_profile_address);
@@ -38,8 +38,16 @@ public class UserProfileActivity extends AppCompatActivity
                 newProfileData.put("title", mFieldProfileTitle.getText().toString());
                 Models.accountInSession.setProfileData(newProfileData);
 
-                Intent intent = new Intent(UserProfileActivity.this, MainAppActivity.class);
+                Intent intent = new Intent(EditProfileActivity.this, ViewProfileActivity.class);
                 startActivity(intent);
+            }
+        });
+
+
+        Button btnGotoEdit = (Button) findViewById(R.id.btn_cancel_edit);
+        btnGotoEdit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToProfile();
             }
         });
 
@@ -50,5 +58,9 @@ public class UserProfileActivity extends AppCompatActivity
             mFieldProfileAddress.setText((String) profileData.get("address"));
 
         }
+    }
+    public void goToProfile() {
+        Intent intent = new Intent(this, ViewProfileActivity.class);
+        startActivity(intent);
     }
 }
