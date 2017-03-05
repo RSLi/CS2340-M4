@@ -17,6 +17,7 @@ public class MainAppActivity extends AppCompatActivity {
 
         Button mBtnUserProfile = (Button) findViewById(R.id.btn_user_profile);
         Button mBtnLogout = (Button) findViewById(R.id.button_logout);
+        Button mBtnCreateReport = (Button) findViewById(R.id.btn_create_report);
 
 
         mBtnUserProfile.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +33,14 @@ public class MainAppActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Models.logout();
                 Intent intent = new Intent(MainAppActivity.this, WelcomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnCreateReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainAppActivity.this, CreateReportActivity.class);
                 startActivity(intent);
             }
         });

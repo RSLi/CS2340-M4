@@ -27,5 +27,7 @@
         <activity android:name=".ViewProfileActivity">
         </activity>
         <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".CreateReportActivity"/>
+        <activity android:name=".CreateWaterPurityReport"/>
     </application>
 </manifest>
