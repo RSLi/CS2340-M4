@@ -19,8 +19,7 @@ public class EditProfileActivity extends AppCompatActivity
     Button mBtnSaveProfile;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
@@ -39,6 +38,7 @@ public class EditProfileActivity extends AppCompatActivity
                 Models.accountInSession.setProfileData(newProfileData);
 
                 Intent intent = new Intent(EditProfileActivity.this, ViewProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,9 @@ public class EditProfileActivity extends AppCompatActivity
         Button btnGotoEdit = (Button) findViewById(R.id.btn_cancel_edit);
         btnGotoEdit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                goToProfile();
+                Intent intent = new Intent(EditProfileActivity.this, ViewProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 
@@ -58,9 +60,5 @@ public class EditProfileActivity extends AppCompatActivity
             mFieldProfileAddress.setText((String) profileData.get("address"));
 
         }
-    }
-    public void goToProfile() {
-        Intent intent = new Intent(this, ViewProfileActivity.class);
-        startActivity(intent);
     }
 }
