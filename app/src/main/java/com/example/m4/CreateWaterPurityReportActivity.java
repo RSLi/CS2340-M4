@@ -34,6 +34,7 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
                 WaterPurityReport report = new WaterPurityReport();
                 report.setWaterOverallCondition((WaterOverallCondition)spWaterOverallCondition.getSelectedItem());
                 Intent intent = new Intent(CreateWaterPurityReportActivity.this, CreateReportActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -42,6 +43,7 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CreateWaterPurityReportActivity.this, CreateReportActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

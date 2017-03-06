@@ -20,6 +20,8 @@ import org.w3c.dom.Text;
 import java.util.Date;
 
 public class CreateWaterSourceReportActivity extends AppCompatActivity {
+    final WaterSourceReport report = new WaterSourceReport();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_water_source_report);
@@ -34,20 +36,21 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         TextView reporter = (TextView) findViewById((R.id.field_source_reporter));
         TextView reportNo = (TextView) findViewById((R.id.field_source_num));
         TextView dateTime = (TextView) findViewById((R.id.field_date_time));
-        final WaterSourceReport report = new WaterSourceReport();
-//        reporter.setText(report.getReportNumber());
-//        reportNo.setText(report.getReportNumber());
-//        Date d = report.getDate();
-//        dateTime.setText(d.toString());
+
+        reporter.setText(Models.accountInSession.getUsername());
+        reportNo.setText(((Integer) Models.getReportsAsList().size()).toString());
+        Date date = new Date();
+        dateTime.setText(date.toString());
 
         btnSourceReportSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //WaterSourceReport report = new WaterSourceReport();
                 report.setWaterCondition((WaterCondition)spWaterCondition.getSelectedItem());
                 report.setWaterType((WaterType)spWaterType.getSelectedItem());
                 report.setLocation(location.toString());
+                Models.submitReport(report);
                 Intent intent = new Intent(CreateWaterSourceReportActivity.this, CreateReportActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -56,6 +59,7 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CreateWaterSourceReportActivity.this, CreateReportActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
