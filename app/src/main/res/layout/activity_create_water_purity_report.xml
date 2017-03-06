@@ -123,24 +123,38 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/field_date_time"
         android:layout_alignStart="@+id/field_date_time"
-        android:id="@+id/editText"
+        android:id="@+id/edit_location"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
-    <Spinner
-        android:layout_width="match_parent"
+    <TextView
+        android:text="num"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_water_overall_condition"
-        android:layout_alignTop="@+id/textView9"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/field_reporter_name"
-        android:layout_toEndOf="@+id/field_reporter_name" />
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/field_purity_reporter"
+        android:layout_alignStart="@+id/field_purity_reporter"
+        android:id="@+id/field_purity_num" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="PPM"
+        android:ems="10"
+        android:id="@+id/edit_Virus_PPm"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignBaseline="@+id/TextView33"
+        android:layout_alignBottom="@+id/TextView33"
+        android:layout_toRightOf="@+id/btn_purity_submit"
+        android:layout_toEndOf="@+id/btn_purity_submit"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
 
     <TextView
         android:text="name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/field_reporter_name"
+        android:id="@+id/field_purity_reporter"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
         android:layout_toRightOf="@+id/textView12"
@@ -153,46 +167,28 @@
         android:id="@+id/field_date_time"
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignBottom="@+id/textView8"
-        android:layout_alignLeft="@+id/field_reporter_name"
-        android:layout_alignStart="@+id/field_reporter_name" />
+        android:layout_alignLeft="@+id/field_purity_num"
+        android:layout_alignStart="@+id/field_purity_num" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/field_reporter_name"
-        android:layout_alignStart="@+id/field_reporter_name"
-        android:id="@+id/textView13" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editText3"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_alignBaseline="@+id/TextView33"
-        android:layout_alignBottom="@+id/TextView33"
+        android:id="@+id/spinner_water_overall_condition"
+        android:layout_alignTop="@+id/textView9"
         android:layout_toRightOf="@+id/btn_purity_submit"
-        android:layout_toEndOf="@+id/btn_purity_submit"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp" />
+        android:layout_toEndOf="@+id/btn_purity_submit" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="PPM"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/edit_contaminant_PPM"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView12"
         android:layout_alignBottom="@+id/textView12"
-        android:layout_alignRight="@+id/btn_purity_cancel"
-        android:layout_alignEnd="@+id/btn_purity_cancel"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp" />
+        android:layout_toRightOf="@+id/field_purity_num"
+        android:layout_toEndOf="@+id/field_purity_num" />
 
 </RelativeLayout>

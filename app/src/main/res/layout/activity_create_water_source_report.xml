@@ -79,18 +79,6 @@
         android:layout_alignLeft="@+id/textView38"
         android:layout_alignStart="@+id/textView38" />
 
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_source_cancel"
-        android:layout_alignBaseline="@+id/btn_source_submit"
-        android:layout_alignBottom="@+id/btn_source_submit"
-        android:layout_toRightOf="@+id/field_date_time"
-        android:layout_toEndOf="@+id/field_date_time"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp" />
-
     <TextView
         android:text="Reporter:"
         android:layout_width="wrap_content"
