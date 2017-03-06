@@ -2,9 +2,9 @@ package com.example.m4.models;
 
 public class WaterPurityReport extends Report
 {
-    WaterOverallCondition waterOverallCondition;
-    Double virusPPM;
-    Double contaminantPPM;
+    private WaterOverallCondition waterOverallCondition;
+    private Double virusPPM;
+    private Double contaminantPPM;
 
     public WaterOverallCondition getWaterOverallCondition()
     {

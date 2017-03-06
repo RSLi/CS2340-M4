@@ -22,7 +22,15 @@ public class CreateReportActivity extends AppCompatActivity {
         btnCreateWaterPurityReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CreateReportActivity.this, CreateWaterPurityReport.class);
+                Intent intent = new Intent(CreateReportActivity.this, CreateWaterPurityReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnCreateWaterSourceReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreateReportActivity.this, CreateWaterSourceReportActivity.class);
                 startActivity(intent);
             }
         });

@@ -28,6 +28,7 @@
         </activity>
         <activity android:name=".EditProfileActivity"/>
         <activity android:name=".CreateReportActivity"/>
-        <activity android:name=".CreateWaterPurityReport"/>
+        <activity android:name=".CreateWaterPurityReportActivity"/>
+        <activity android:name=".CreateWaterSourceReportActivity"/>
     </application>
 </manifest>
