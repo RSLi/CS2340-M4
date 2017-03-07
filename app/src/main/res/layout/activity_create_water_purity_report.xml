@@ -33,18 +33,6 @@
         android:layout_toLeftOf="@+id/textView4"
         android:layout_toStartOf="@+id/textView4" />
 
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_purity_cancel"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_alignBaseline="@+id/btn_purity_submit"
-        android:layout_alignBottom="@+id/btn_purity_submit"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
-
     <TextView
         android:text="Location:"
         android:layout_width="wrap_content"
@@ -190,5 +178,15 @@
         android:layout_alignBottom="@+id/textView12"
         android:layout_toRightOf="@+id/field_purity_num"
         android:layout_toEndOf="@+id/field_purity_num" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_purity_cancel"
+        android:layout_alignBaseline="@+id/btn_purity_submit"
+        android:layout_alignBottom="@+id/btn_purity_submit"
+        android:layout_toRightOf="@+id/btn_purity_submit"
+        android:layout_toEndOf="@+id/btn_purity_submit" />
 
 </RelativeLayout>

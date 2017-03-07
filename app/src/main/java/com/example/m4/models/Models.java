@@ -9,6 +9,7 @@ public class Models
     public static HashMap<String, AccountType> localAccounts = new HashMap<String, AccountType>();
     public static AccountType accountInSession;
     public static ArrayList<Report> localReportList = new ArrayList<Report>();
+    public static ArrayList<Report> fullReport = new ArrayList<Report>();
 
     public static HashMap getLocalAccounts() {
         return localAccounts;
@@ -59,7 +60,6 @@ public class Models
     public static ArrayList getReportsAsList() {
         return localReportList;
     }
-
     /**
      * Add report
      * @param report

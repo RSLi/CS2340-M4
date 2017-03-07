@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -154,5 +155,15 @@
         android:layout_above="@+id/textView40"
         android:layout_alignLeft="@+id/textView40"
         android:layout_alignStart="@+id/textView40" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_source_cancel"
+        tools:text="Cancel"
+        android:layout_alignBaseline="@+id/btn_source_submit"
+        android:layout_alignBottom="@+id/btn_source_submit"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

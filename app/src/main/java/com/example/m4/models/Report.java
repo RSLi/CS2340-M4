@@ -5,8 +5,7 @@ import java.util.Date;
 /**
  * Report object containing common report information
  */
-public abstract class Report
-{
+public abstract class Report {
     String reporterUsername;
     int reportNumber;
     Date date;
@@ -44,6 +43,9 @@ public abstract class Report
         this.location = location;
     }
 
+    public String toString() {
+        return "Report Number: " + getReportNumber();
+    }
     /**
      * Check if the data in the report is valid
      * @return true if data is valid to be inserted

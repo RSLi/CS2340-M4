@@ -18,6 +18,7 @@ public class CreateReportActivity extends AppCompatActivity {
 
         Button btnCreateWaterSourceReport = (Button) findViewById(R.id.btn_create_water_source_report);
         Button btnCreateWaterPurityReport = (Button) findViewById(R.id.btn_create_water_purity_report);
+        Button btnCancel = (Button) findViewById(R.id.button_cancel);
 
         btnCreateWaterPurityReport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,5 +35,14 @@ public class CreateReportActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreateReportActivity.this, MainAppActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
