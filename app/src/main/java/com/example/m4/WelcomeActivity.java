@@ -12,8 +12,10 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        //get buttons
         Button btnGotoLogin = (Button)findViewById(R.id.btn_goto_login);
         Button btnGotoRegistration = (Button)findViewById(R.id.btn_goto_registration);
+        //set buttons
         btnGotoLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 goToLogin();
@@ -26,6 +28,7 @@ public class WelcomeActivity extends AppCompatActivity {
         });
     }
 
+    //methods for intent
     public void goToLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

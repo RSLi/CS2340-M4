@@ -6,26 +6,63 @@
 
 
     <TextView
-        android:text="Report"
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView13"
-        android:textSize="36sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:id="@+id/reporter"
+        android:layout_alignBaseline="@+id/textView18"
+        android:layout_alignBottom="@+id/textView18"
+        android:layout_alignLeft="@+id/reportNum"
+        android:layout_alignStart="@+id/reportNum" />
 
     <TextView
-        android:text="Report Number: "
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView13"
-        android:layout_toLeftOf="@+id/textView13"
-        android:layout_toStartOf="@+id/textView13"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp" />
+        android:id="@+id/location"
+        android:layout_alignBaseline="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignLeft="@+id/location"
+        android:layout_alignStart="@+id/location" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView102"
+        android:layout_alignRight="@+id/textView101"
+        android:layout_alignEnd="@+id/textView101"
+        android:id="@+id/textView103" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportNum"
+        android:layout_alignLeft="@+id/location"
+        android:layout_alignStart="@+id/location"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_above="@+id/textView18" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView105"
+        android:layout_alignBaseline="@+id/textView104"
+        android:layout_alignBottom="@+id/textView104"
+        android:layout_alignLeft="@+id/textView103"
+        android:layout_alignStart="@+id/textView103" />
 
     <TextView
         android:text="Reporter: "
@@ -34,8 +71,8 @@
         android:layout_marginTop="26dp"
         android:id="@+id/textView18"
         android:layout_below="@+id/textView17"
-        android:layout_alignRight="@+id/textView17"
-        android:layout_alignEnd="@+id/textView17" />
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17" />
 
     <TextView
         android:text="Report Date:"
@@ -44,64 +81,77 @@
         android:layout_marginTop="21dp"
         android:id="@+id/textView19"
         android:layout_below="@+id/textView18"
-        android:layout_alignRight="@+id/textView18"
-        android:layout_alignEnd="@+id/textView18" />
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18" />
 
     <TextView
         android:text="Location:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="19dp"
         android:id="@+id/textView20"
         android:layout_below="@+id/textView19"
-        android:layout_alignRight="@+id/textView19"
-        android:layout_alignEnd="@+id/textView19" />
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
 
-    <EditText
+    <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="1234567"
-        android:ems="10"
-        android:id="@+id/reportNum"
-        android:layout_alignBaseline="@+id/textView17"
-        android:layout_alignBottom="@+id/textView17"
-        android:layout_toRightOf="@+id/textView17"
-        android:layout_toEndOf="@+id/textView17" />
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView104"
+        android:layout_below="@+id/textView102"
+        android:layout_alignLeft="@+id/textView102"
+        android:layout_alignStart="@+id/textView102" />
 
-    <EditText
+    <TextView
+        android:text="Report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="John"
-        android:ems="10"
-        android:id="@+id/reporter"
-        android:layout_below="@+id/reportNum"
-        android:layout_alignLeft="@+id/reportNum"
-        android:layout_alignStart="@+id/reportNum" />
+        android:id="@+id/textView13"
+        android:textSize="36sp"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-    <EditText
+    <TextView
+        android:text="Report No: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="1/23/45"
-        android:ems="10"
-        android:id="@+id/date"
-        android:layout_alignBaseline="@+id/textView19"
-        android:layout_alignBottom="@+id/textView19"
-        android:layout_alignLeft="@+id/reporter"
-        android:layout_alignStart="@+id/reporter" />
+        android:layout_marginTop="70dp"
+        android:id="@+id/textView17"
+        android:layout_below="@+id/textView13"
+        android:layout_toLeftOf="@+id/textView13"
+        android:layout_toStartOf="@+id/textView13" />
 
-    <EditText
+    <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Indiana"
-        android:ems="10"
-        android:id="@+id/location"
-        android:layout_alignBaseline="@+id/textView20"
-        android:layout_alignBottom="@+id/textView20"
-        android:layout_alignLeft="@+id/date"
-        android:layout_alignStart="@+id/date" />
+        android:layout_marginTop="29dp"
+        android:id="@+id/textView102"
+        android:layout_below="@+id/textView100"
+        android:layout_alignRight="@+id/textView17"
+        android:layout_alignEnd="@+id/textView17" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textView100"
+        android:layout_below="@+id/textView20"
+        android:layout_alignLeft="@+id/textView102"
+        android:layout_alignStart="@+id/textView102" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView101"
+        android:layout_alignBaseline="@+id/textView100"
+        android:layout_alignBottom="@+id/textView100"
+        android:layout_alignLeft="@+id/location"
+        android:layout_alignStart="@+id/location" />
 
 </RelativeLayout>

@@ -23,11 +23,13 @@ public class EditProfileActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
+        //set up view's variables
         mFieldProfileEmail = (EditText) findViewById(R.id.field_profile_email);
         mFieldProfileAddress = (EditText) findViewById(R.id.field_profile_address);
         mFieldProfileTitle = (EditText) findViewById(R.id.field_profile_title);
         mBtnSaveProfile = (Button) findViewById((R.id.btn_save_profile));
 
+        //once submit is clicked, new info is added to the hashmap
         mBtnSaveProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +45,7 @@ public class EditProfileActivity extends AppCompatActivity
             }
         });
 
-
+        //Cancel button
         Button btnGotoEdit = (Button) findViewById(R.id.btn_cancel_edit);
         btnGotoEdit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -53,6 +55,7 @@ public class EditProfileActivity extends AppCompatActivity
             }
         });
 
+        //display existing user info
         HashMap profileData = Models.accountInSession.getProfileData();
         if (profileData != null) {
             mFieldProfileEmail.setText((String) profileData.get("email"));

@@ -6,20 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by yuchen on 2017/3/5.
- */
-
 public class CreateReportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_report);
-
+        //get buttons
         Button btnCreateWaterSourceReport = (Button) findViewById(R.id.btn_create_water_source_report);
         Button btnCreateWaterPurityReport = (Button) findViewById(R.id.btn_create_water_purity_report);
         Button btnCancel = (Button) findViewById(R.id.button_cancel);
-
+        //set buttons
         btnCreateWaterPurityReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

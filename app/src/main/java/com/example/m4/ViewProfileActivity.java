@@ -23,18 +23,22 @@ public class ViewProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
 
+        //get buttons and textviews
         mFieldProfileEmail = (TextView) findViewById(R.id.field_profile_email);
         mFieldProfileAddress = (TextView) findViewById(R.id.field_profile_address);
         mFieldProfileTitle = (TextView) findViewById(R.id.field_profile_title);
         mBtnEditProfile = (Button) findViewById((R.id.btn_goto_Edit));
 
+        //set button
         Button btnGotoProfile = (Button) findViewById(R.id.btn_goto_Edit);
         btnGotoProfile.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                goToProfile();
+                Intent intent = new Intent(ViewProfileActivity.this, EditProfileActivity.class);
+                startActivity(intent);
             }
         });
 
+        //display user info
         HashMap profileData = Models.accountInSession.getProfileData();
         if (profileData != null) {
             mFieldProfileEmail.setText((String) profileData.get("email"));
@@ -42,10 +46,4 @@ public class ViewProfileActivity extends AppCompatActivity {
             mFieldProfileAddress.setText((String) profileData.get("address"));
         }
     }
-
-    public void goToProfile() {
-        Intent intent = new Intent(this, EditProfileActivity.class);
-        startActivity(intent);
-    }
-
 }

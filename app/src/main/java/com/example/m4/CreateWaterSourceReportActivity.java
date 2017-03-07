@@ -26,28 +26,34 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_water_source_report);
 
+        //get buttons
         Button btnSourceReportSubmit = (Button) findViewById(R.id.btn_source_submit);
         Button btnSourceReportCancel = (Button) findViewById(R.id.btn_source_cancel);
+
+        //set up waterType and waterCondition spinners
         final Spinner spWaterType = (Spinner) findViewById(R.id.spinner_water_type);
         final Spinner spWaterCondition = (Spinner) findViewById(R.id.spinner_condition);
         spWaterType.setAdapter(new ArrayAdapter<WaterType>(this, android.R.layout.simple_spinner_item, WaterType.values()));
         spWaterCondition.setAdapter(new ArrayAdapter<WaterCondition>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
+        //get info user typed in
         final EditText location = (EditText) findViewById(R.id.edit_location);
+
+        //display reporter name, report number, and dateTime on screen by autogenerating
         TextView reporter = (TextView) findViewById((R.id.field_source_reporter));
         TextView reportNo = (TextView) findViewById((R.id.field_source_num));
         TextView dateTime = (TextView) findViewById((R.id.field_date_time));
-
         reporter.setText(Models.accountInSession.getUsername());
         reportNo.setText(((Integer) Models.getReportsAsList().size()).toString());
         Date date = new Date();
         dateTime.setText(date.toString());
 
+        //new report should be created once click submit button
         btnSourceReportSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 report.setWaterCondition((WaterCondition)spWaterCondition.getSelectedItem());
                 report.setWaterType((WaterType)spWaterType.getSelectedItem());
-                report.setLocation(location.toString());
+                report.setLocation(location.getText().toString());
                 Models.submitReport(report);
                 Intent intent = new Intent(CreateWaterSourceReportActivity.this, CreateReportActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -55,6 +61,7 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
             }
         });
 
+        //set up cancel button
         btnSourceReportCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
