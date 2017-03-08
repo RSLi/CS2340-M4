@@ -1,26 +1,18 @@
-package com.example.m4;
+package com.example.m4.Controllers;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.Report;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ViewReportActivity extends AppCompatActivity {
 

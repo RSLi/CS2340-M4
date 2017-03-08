@@ -1,4 +1,4 @@
-package com.example.m4;
+package com.example.m4.Controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,12 +10,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.WaterCondition;
 import com.example.m4.models.WaterSourceReport;
 import com.example.m4.models.WaterType;
-
-import org.w3c.dom.Text;
 
 import java.util.Date;
 

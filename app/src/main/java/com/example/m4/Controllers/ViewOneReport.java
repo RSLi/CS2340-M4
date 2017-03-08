@@ -1,4 +1,4 @@
-package com.example.m4;
+package com.example.m4.Controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.Report;
 import com.example.m4.models.WaterPurityReport;

@@ -1,8 +1,7 @@
-package com.example.m4;
+package com.example.m4.Controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,12 +10,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.m4.R;
 import com.example.m4.models.Models;
-import com.example.m4.models.WaterCondition;
 import com.example.m4.models.WaterOverallCondition;
 import com.example.m4.models.WaterPurityReport;
-import com.example.m4.models.WaterSourceReport;
-import com.example.m4.models.WaterType;
 
 import java.util.Date;
 
