@@ -10,6 +10,8 @@ public abstract class Report {
     int reportNumber;
     Date date;
     String location;
+    double latitude;
+    double longitude;
 
     public String getReporterUsername() {
         return reporterUsername;
@@ -46,6 +48,23 @@ public abstract class Report {
     public String toString() {
         return "Report Number: " + getReportNumber();
     }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
     /**
      * Check if the data in the report is valid
      * @return true if data is valid to be inserted

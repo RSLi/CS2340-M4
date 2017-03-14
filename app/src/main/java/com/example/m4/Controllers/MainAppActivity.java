@@ -20,6 +20,7 @@ public class MainAppActivity extends AppCompatActivity {
         Button mBtnLogout = (Button) findViewById(R.id.button_logout);
         Button mBtnCreateReport = (Button) findViewById(R.id.btn_create_report);
         Button mBtnViewReport = (Button) findViewById(R.id.btn_view_report);
+        Button mBtnViewMapReports = (Button) findViewById(R.id.btn_view_map_reports);
 
 
         mBtnUserProfile.setOnClickListener(new View.OnClickListener() {
@@ -55,5 +56,13 @@ public class MainAppActivity extends AppCompatActivity {
             }
         });
 
+        mBtnViewMapReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainAppActivity.this, ViewReportsMapActivity.class);
+                startActivity(intent);
+                System.out.println("view");
+            }
+        });
     }
 }
