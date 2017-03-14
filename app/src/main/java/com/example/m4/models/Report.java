@@ -6,12 +6,12 @@ import java.util.Date;
  * Report object containing common report information
  */
 public abstract class Report {
-    String reporterUsername;
-    int reportNumber;
-    Date date;
-    String location;
-    double latitude;
-    double longitude;
+    private String reporterUsername;
+    private int reportNumber;
+    private Date date;
+    private String location;
+    private double latitude;
+    private double longitude;
 
     public String getReporterUsername() {
         return reporterUsername;
