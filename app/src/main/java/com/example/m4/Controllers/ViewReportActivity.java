@@ -4,48 +4,38 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.Button;
 
 import com.example.m4.R;
-import com.example.m4.models.Models;
-import com.example.m4.models.Report;
 
-import java.util.ArrayList;
+/**
+ * Created by yuchen on 2017/3/14.
+ */
 
-public class ViewReportActivity extends AppCompatActivity {
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-
+public class ViewReportActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_report);
-        //add all the reports into a list
-        final ArrayList<Report> profileData = Models.getReportsAsList();
+        setContentView(R.layout.activity_view_report_options);
 
-
-        final ListView listview = (ListView) findViewById(R.id.report_list);
-        final ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, profileData);
-        listview.setAdapter(adapter);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        Button btnViewReportList = (Button) findViewById(R.id.btn_report_list);
+        //set buttons
+        btnViewReportList.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3) {
-                //view one report
-                Intent intent = new Intent(ViewReportActivity.this, ViewOneReport.class);
-                intent.putExtra("rowNum", arg2);
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewReportActivity.this, ViewReportListActivity.class);
                 startActivity(intent);
             }
-
         });
 
+        Button btnViewWaterAvail = (Button) findViewById(R.id.btn_water_availability);
+        //set buttons
+        btnViewWaterAvail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewReportActivity.this, ViewReportsMapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
 }

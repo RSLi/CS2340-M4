@@ -35,7 +35,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         spWaterType.setAdapter(new ArrayAdapter<WaterType>(this, android.R.layout.simple_spinner_item, WaterType.values()));
         spWaterCondition.setAdapter(new ArrayAdapter<WaterCondition>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
         //get info user typed in
-        final EditText location = (EditText) findViewById(R.id.edit_location);
+        final EditText longitude = (EditText) findViewById(R.id.edit_longitute);
+        final EditText latitude = (EditText) findViewById(R.id.edit_latitute);
 
         //display reporter name, report number, and dateTime on screen by autogenerating
         TextView reporter = (TextView) findViewById((R.id.field_source_reporter));
@@ -52,7 +53,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
             public void onClick(View view) {
                 report.setWaterCondition((WaterCondition)spWaterCondition.getSelectedItem());
                 report.setWaterType((WaterType)spWaterType.getSelectedItem());
-                report.setLocation(location.getText().toString());
+                report.setLongitude(Double.parseDouble(longitude.getText().toString()));
+                report.setLatitude(Double.parseDouble(latitude.getText().toString()));
                 Models.submitReport(report);
                 Intent intent = new Intent(CreateWaterSourceReportActivity.this, CreateReportActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

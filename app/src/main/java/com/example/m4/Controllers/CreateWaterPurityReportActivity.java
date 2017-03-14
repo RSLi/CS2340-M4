@@ -41,7 +41,8 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
         dateTime.setText(date.toString());
 
         //get the info user typed in
-        final EditText location = (EditText) findViewById(R.id.edit_location);
+        final EditText longitude = (EditText) findViewById(R.id.edit_longitute);
+        final EditText latitude = (EditText) findViewById(R.id.edit_Latitute);
         final EditText contaminantPPM = (EditText) findViewById(R.id.edit_contaminant_PPM);
         final EditText virusPPM = (EditText) findViewById(R.id.edit_Virus_PPm);
 
@@ -50,7 +51,8 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 report.setWaterOverallCondition((WaterOverallCondition)spWaterOverallCondition.getSelectedItem());
-                report.setLocation(location.getText().toString());
+                report.setLongitude(Double.parseDouble(longitude.getText().toString()));
+                report.setLatitude(Double.parseDouble(latitude.getText().toString()));
                 report.setContaminantPPM(Double.parseDouble(contaminantPPM.getText().toString()));
                 report.setVirusPPM(Double.parseDouble(virusPPM.getText().toString()));
                 Models.submitReport(report);

@@ -57,7 +57,7 @@ public class ViewOneReport extends AppCompatActivity {
         mReportNumber.setText(""+ list.get(intValue).getReportNumber());
         mReporter.setText("" + list.get(intValue).getReporterUsername());
         mDate.setText(list.get(intValue).getDate().toString());
-        mLocation.setText(list.get(intValue).getLocation());
+        mLocation.setText("" + list.get(intValue).getLongitude() + ", " + list.get(intValue).getLatitude());
 
         //display relevant info according to the report type
         if (list.get(intValue) instanceof WaterSourceReport){

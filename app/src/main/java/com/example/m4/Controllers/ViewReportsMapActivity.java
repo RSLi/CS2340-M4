@@ -22,7 +22,8 @@ import java.util.List;
 public class ViewReportsMapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private List<Report> mReports;
+    //SupportMapFragment fragMap;
+    private static List<Report> mReports;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,19 +49,15 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-//        for (Report r : mReports) {
-//            Marker markedReport = mMap.addMarker(new MarkerOptions().position(new LatLng(r.getLatitude(), r.getLongitude())));
-//            if (r instanceof WaterPurityReport) {
-//
-//            } else if (r instanceof WaterSourceReport) {
-//
-//            } else {
-//
-//            }
-//        }
+        mReports = Models.getReportsAsList();
+        //display markers for all water source reports
+        for (Report r : mReports) {
+            if (r instanceof WaterSourceReport) {
+                LatLng location = new LatLng((r.getLongitude()), r.getLatitude());
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+                //when the maker is clicked, show the water type and water condition of the water source
+                mMap.addMarker(new MarkerOptions().position(location).title("" + ((WaterSourceReport) r).getWaterType() + ", " + ((WaterSourceReport) r).getWaterCondition()));
+            }
+        }
     }
 }

@@ -36,12 +36,9 @@
         <activity android:name=".Controllers.CreateReportActivity" />
         <activity android:name=".Controllers.CreateWaterPurityReportActivity" />
         <activity android:name=".Controllers.CreateWaterSourceReportActivity" />
+        <activity android:name=".Controllers.ViewReportActivity" />
         <activity
-            android:name=".ViewReports"
-            android:label="@string/title_activity_view_reports"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Controllers.ViewReportActivity"
+            android:name=".Controllers.ViewReportListActivity"
             android:label="@string/title_activity_view_report"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -65,7 +62,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyCr83uellY2J-ErBN6nYEbM8BM_SIU0t74" />
 
         <activity
             android:name=".Controllers.ViewReportsMapActivity"
