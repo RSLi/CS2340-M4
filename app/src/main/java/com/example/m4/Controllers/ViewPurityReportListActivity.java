@@ -14,7 +14,6 @@ import com.example.m4.models.Report;
 import com.example.m4.models.WaterPurityReport;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class ViewPurityReportListActivity extends AppCompatActivity {
 
@@ -38,7 +37,7 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
             }
         }
 
-
+        // display list of purity reports
         final ListView listview = (ListView) findViewById(R.id.report_list);
         final ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, profileData);
@@ -51,6 +50,7 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
                 //view one report
                 Intent intent = new Intent(ViewPurityReportListActivity.this, ViewOneReport.class);
                 intent.putExtra("rowNum", arg2);
+                intent.putExtra("reportNo", profileData.get(arg2).getReportNumber());
                 startActivity(intent);
             }
 

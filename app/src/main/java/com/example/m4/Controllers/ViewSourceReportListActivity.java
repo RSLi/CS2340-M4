@@ -27,7 +27,7 @@ public class ViewSourceReportListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_report_list);
-        //add all the purity reports into a list
+        //add all the source reports into a list
         // if in API 24+:
         // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterSourceReport).collect(Collectors.toList());
         ArrayList<Report> allReportList = Models.getReportsAsList();
@@ -37,7 +37,7 @@ public class ViewSourceReportListActivity extends AppCompatActivity {
                 profileData.add((WaterSourceReport) report);
             }
         }
-
+        // display list of source reports
         final ListView listview = (ListView) findViewById(R.id.report_list);
         final ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, profileData);
@@ -50,6 +50,7 @@ public class ViewSourceReportListActivity extends AppCompatActivity {
                 //view one report
                 Intent intent = new Intent(ViewSourceReportListActivity.this, ViewOneReport.class);
                 intent.putExtra("rowNum", arg2);
+                intent.putExtra("reportNo", profileData.get(arg2).getReportNumber());
                 startActivity(intent);
             }
 

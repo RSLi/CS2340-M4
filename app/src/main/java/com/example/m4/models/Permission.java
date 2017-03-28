@@ -1,5 +1,6 @@
 package com.example.m4.models;
 
+// add permission enums
 public enum Permission
 {
     SUBMIT_REPORT,

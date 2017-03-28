@@ -23,7 +23,7 @@ public class ViewReportActivity extends AppCompatActivity{
 
         Button btnViewReportList = (Button) findViewById(R.id.btn_source_report_list);
 
-        //set buttons
+        //add permission to view source reports
         btnViewReportList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +41,7 @@ public class ViewReportActivity extends AppCompatActivity{
         });
 
         Button btnViewPurityReportList = (Button) findViewById(R.id.btn_purity_report_list);
-        //set buttons
+        //add permission that only manager can view purity reports
         btnViewPurityReportList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

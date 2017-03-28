@@ -23,6 +23,7 @@ public class MainAppActivity extends AppCompatActivity {
         Button mBtnCreateReport = (Button) findViewById(R.id.btn_create_report);
         Button mBtnViewReport = (Button) findViewById(R.id.btn_view_report);
 
+        //set up buttons
         mBtnUserProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -37,7 +37,8 @@ public class ViewOneReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_one_report);
         Intent mIntent = getIntent();
-        int intValue = mIntent.getIntExtra("rowNum", 0);
+        //get the report number of the clicked report
+        int intValue = mIntent.getIntExtra("reportNo", 0);
         //get report from reportList
         list = Models.getReportsAsList();
 
