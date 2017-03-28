@@ -65,7 +65,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/edit_Virus_PPm"
         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -107,7 +107,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/edit_contaminant_PPM"
         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -129,7 +129,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/edit_Latitute"
         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -140,7 +140,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/edit_longitute"
         android:textAppearance="@style/TextAppearance.AppCompat"
