@@ -43,14 +43,8 @@ public class MainAppActivity extends AppCompatActivity {
         mBtnCreateReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Models.getAccountInSession().hasPermission(Permission.SUBMIT_REPORT)) {
-                    Intent intent = new Intent(MainAppActivity.this, CreateReportActivity.class);
-                    startActivity(intent);
-                } else {
-                    new AlertDialog.Builder(MainAppActivity.this)
-                            .setTitle("No Permission")
-                            .setMessage("Only Workers and Managers can submit reports").show();
-                }
+                Intent intent = new Intent(MainAppActivity.this, CreateReportActivity.class);
+                startActivity(intent);
             }
         });
 
