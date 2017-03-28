@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView28"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="12dp"
         android:text="Create Water"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:text="Source Report"
@@ -32,10 +32,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView26"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_alignBottom="@+id/textView28"
-        android:layout_toRightOf="@+id/textView32"
-        android:layout_toEndOf="@+id/textView32"
-        android:layout_marginBottom="27dp" />
+        android:layout_below="@+id/textView28"
+        android:layout_alignLeft="@+id/textView28"
+        android:layout_alignStart="@+id/textView28"/>
 
     <TextView
         android:text="Report No:"
