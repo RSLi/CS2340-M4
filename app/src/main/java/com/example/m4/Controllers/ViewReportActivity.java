@@ -18,12 +18,23 @@ public class ViewReportActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_report_options);
 
-        Button btnViewReportList = (Button) findViewById(R.id.btn_report_list);
+        Button btnViewReportList = (Button) findViewById(R.id.btn_source_report_list);
+
         //set buttons
         btnViewReportList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ViewReportActivity.this, ViewReportListActivity.class);
+                Intent intent = new Intent(ViewReportActivity.this, ViewSourceReportListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnViewPurityReportList = (Button) findViewById(R.id.btn_purity_report_list);
+        //set buttons
+        btnViewPurityReportList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewReportActivity.this, ViewPurityReportListActivity.class);
                 startActivity(intent);
             }
         });

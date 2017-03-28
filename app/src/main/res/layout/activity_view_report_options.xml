@@ -4,21 +4,30 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="Report List"
+        android:id="@+id/btn_purity_report_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_source_report_list"
+        android:layout_centerHorizontal="true"
+        android:text="Water Purity Report"/>
+
+    <Button
+        android:id="@+id/btn_source_report_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView23"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:id="@+id/btn_report_list" />
+        android:text="Water Source Report"/>
 
     <Button
-        android:text="Water Availability"
+        android:id="@+id/btn_water_availability"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_water_availability"
-        android:layout_below="@+id/btn_report_list"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/btn_purity_report_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Water Availability Map"/>
 
     <Button
         android:text="Historical Report"
@@ -26,7 +35,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_historical_report"
         android:layout_below="@+id/btn_water_availability"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:text="View Report"

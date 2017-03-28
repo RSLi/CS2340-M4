@@ -37,8 +37,9 @@
         <activity android:name=".Controllers.CreateWaterPurityReportActivity" />
         <activity android:name=".Controllers.CreateWaterSourceReportActivity" />
         <activity android:name=".Controllers.ViewReportActivity" />
+        <activity android:name=".Controllers.ViewPurityReportListActivity" />
         <activity
-            android:name=".Controllers.ViewReportListActivity"
+            android:name=".Controllers.ViewSourceReportListActivity"
             android:label="@string/title_activity_view_report"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

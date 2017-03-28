@@ -11,10 +11,12 @@ import android.widget.ListView;
 import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.Report;
+import com.example.m4.models.WaterPurityReport;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
-public class ViewReportListActivity extends AppCompatActivity {
+public class ViewPurityReportListActivity extends AppCompatActivity {
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -25,8 +27,16 @@ public class ViewReportListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_report_list);
-        //add all the reports into a list
-        final ArrayList<Report> profileData = Models.getReportsAsList();
+        //add all the purity reports into a list
+        // if in API 24+:
+        // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterPurityReport).collect(Collectors.toList());
+        ArrayList<Report> allReportList = Models.getReportsAsList();
+        final ArrayList<WaterPurityReport> profileData = new ArrayList<WaterPurityReport>();
+        for (Report report : allReportList) {
+            if (report instanceof WaterPurityReport) {
+                profileData.add((WaterPurityReport) report);
+            }
+        }
 
 
         final ListView listview = (ListView) findViewById(R.id.report_list);
@@ -39,7 +49,7 @@ public class ViewReportListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
                 //view one report
-                Intent intent = new Intent(ViewReportListActivity.this, ViewOneReport.class);
+                Intent intent = new Intent(ViewPurityReportListActivity.this, ViewOneReport.class);
                 intent.putExtra("rowNum", arg2);
                 startActivity(intent);
             }
