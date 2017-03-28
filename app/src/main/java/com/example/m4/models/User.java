@@ -1,6 +1,9 @@
 package com.example.m4.models;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by RSLi on 2/12/17.
@@ -11,6 +14,9 @@ public class User implements AccountType
     private String username;
     private String password;
     private HashMap profileData;
+    private List<Permission> permissions = Arrays.asList(
+            Permission.ACCESS_AVAILABILITY_REPORT
+    );
 
     public User() {
         this("dummy_username", "dummy_password");
@@ -19,6 +25,11 @@ public class User implements AccountType
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    @Override
+    public boolean hasPermission(Permission permission) {
+        return this.permissions.contains(permission);
     }
 
     @Override

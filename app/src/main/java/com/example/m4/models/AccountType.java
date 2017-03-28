@@ -11,4 +11,5 @@ public interface AccountType
     public void setPassword(String password);
     public HashMap getProfileData();
     public void setProfileData(HashMap newData);
+    public boolean hasPermission(Permission permission);
 }
