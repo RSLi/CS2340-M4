@@ -15,6 +15,7 @@ public class User implements AccountType
     private String password;
     private HashMap profileData;
     private List<Permission> permissions = Arrays.asList(
+            Permission.ACCESS_SOURCE_REPORT,
             Permission.ACCESS_AVAILABILITY_REPORT
     );
 

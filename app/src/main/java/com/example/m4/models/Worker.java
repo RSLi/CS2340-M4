@@ -6,6 +6,7 @@ import java.util.List;
 public class Worker extends User
 {
     private List<Permission> permissions = Arrays.asList(
+            Permission.ACCESS_SOURCE_REPORT,
             Permission.ACCESS_AVAILABILITY_REPORT,
             Permission.SUBMIT_REPORT
     );

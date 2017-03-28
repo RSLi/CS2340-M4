@@ -7,6 +7,7 @@ import java.util.List;
 public class Manager extends Worker
 {
     private List<Permission> permissions = Arrays.asList(
+            Permission.ACCESS_SOURCE_REPORT,
             Permission.ACCESS_AVAILABILITY_REPORT,
             Permission.SUBMIT_REPORT,
             Permission.ACCESS_PURITY_REPORT,
