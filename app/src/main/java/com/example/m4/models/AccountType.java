@@ -5,11 +5,13 @@ import java.util.HashMap;
 public interface AccountType
 {
     /**
+     * Get the account username
      * @return The username of the Account
      */
     public String getUsername();
 
     /**
+     * Get the account password
      * @return The password of the Account
      */
     public String getPassword();

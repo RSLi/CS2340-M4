@@ -21,6 +21,7 @@ public class WaterPurityReport extends Report
     }
 
     /**
+     * Get virus density of water reported
      * @return the Virus density in ppm
      */
     public Double getVirusPPM()
@@ -29,6 +30,7 @@ public class WaterPurityReport extends Report
     }
 
     /**
+     * Set virus density reported
      * @param virusPPM The virus ppm of the report
      */
     public void setVirusPPM(Double virusPPM)
@@ -37,7 +39,7 @@ public class WaterPurityReport extends Report
     }
 
     /**
-     *
+     * Get contamination condition
      * @return Contaminant index in ppm
      */
     public Double getContaminantPPM()
@@ -46,7 +48,7 @@ public class WaterPurityReport extends Report
     }
 
     /**
-     *
+     * Set contamination condition
      * @param contaminantPPM The contaminant value in ppm that wants be be recorded
      */
     public void setContaminantPPM(Double contaminantPPM)
