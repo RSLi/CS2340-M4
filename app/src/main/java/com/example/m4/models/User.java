@@ -36,11 +36,6 @@ public class User implements AccountType
     }
 
     @Override
-    public boolean isValid() {
-        return false;
-    }
-
-    @Override
     public String getUsername() {
         return username;
     }
