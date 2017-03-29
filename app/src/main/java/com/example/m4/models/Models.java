@@ -21,8 +21,8 @@ public class Models
 
     /**
      * Register the user in temporary storage
-     * @param newAccount
-     * @return
+     * @param newAccount new AccountType to be registered
+     * @return true if registration is successful
      */
     public static boolean register(AccountType newAccount) {
         localAccounts.put(newAccount.getUsername(),newAccount);
@@ -31,9 +31,9 @@ public class Models
 
     /**
      * Login user in session
-     * @param username
-     * @param pass
-     * @return
+     * @param username The username of the account to be logged in
+     * @param pass The password of the account to be logged in
+     * @return true if login successful, false otherwise
      */
     public static boolean login(String username, String pass)
     {
@@ -50,7 +50,7 @@ public class Models
 
     /**
      * Clear session variable and log user out
-     * @return
+     * @return true if logout successful
      */
     public static boolean logout() {
         accountInSession = null;
