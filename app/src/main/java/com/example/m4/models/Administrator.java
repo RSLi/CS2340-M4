@@ -10,11 +10,6 @@ public class Administrator extends User
     private String password;
 
     @Override
-    public boolean isValid() {
-        return false;
-    }
-
-    @Override
     public String getUsername() {
         return username;
     }
