@@ -12,7 +12,8 @@ public class Manager extends Worker
             Permission.ACCESS_AVAILABILITY_REPORT,
             Permission.SUBMIT_REPORT,
             Permission.ACCESS_PURITY_REPORT,
-            Permission.DELETE_REPORT
+            Permission.DELETE_REPORT,
+            Permission.ACCESS_HISTORICAL_REPORT
     );
 
     @Override

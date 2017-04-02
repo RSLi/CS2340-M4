@@ -45,6 +45,8 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
         final EditText latitude = (EditText) findViewById(R.id.edit_Latitute);
         final EditText contaminantPPM = (EditText) findViewById(R.id.edit_contaminant_PPM);
         final EditText virusPPM = (EditText) findViewById(R.id.edit_Virus_PPm);
+//        //for testing other month, uncomment this line
+//        final EditText month = (EditText) findViewById(R.id.edit_month);
 
         //new report should be created once click submit button
         btnPurityReportSubmit.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +57,8 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
                 report.setLatitude(Double.parseDouble(latitude.getText().toString()));
                 report.setContaminantPPM(Double.parseDouble(contaminantPPM.getText().toString()));
                 report.setVirusPPM(Double.parseDouble(virusPPM.getText().toString()));
+//                //for testing other month, uncomment this line
+//                report.setMonth(Integer.parseInt(month.getText().toString()));
                 Models.submitReport(report);
                 Intent intent = new Intent(CreateWaterPurityReportActivity.this, CreateReportActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

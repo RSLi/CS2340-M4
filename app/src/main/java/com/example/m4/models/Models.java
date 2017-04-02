@@ -1,8 +1,10 @@
 package com.example.m4.models;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.concurrent.CancellationException;
 
 public class Models
 {
@@ -72,6 +74,10 @@ public class Models
         }
 
         report.setDate(new Date());
+        report.setYear(Calendar.getInstance().get(Calendar.YEAR));
+
+        //For testing for other month, comment this line
+        report.setMonth(Calendar.getInstance().get(Calendar.MONTH));
         report.setReportNumber(localReportList.size()); //TODO: Change to backend real index
         report.setReporterUsername(Models.accountInSession.getUsername());
         if (!report.isValid()) {

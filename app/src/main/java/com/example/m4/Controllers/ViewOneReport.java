@@ -57,7 +57,7 @@ public class ViewOneReport extends AppCompatActivity {
         //set textView to detailed report info
         mReportNumber.setText(""+ list.get(intValue).getReportNumber());
         mReporter.setText("" + list.get(intValue).getReporterUsername());
-        mDate.setText(list.get(intValue).getDate().toString());
+        mDate.setText("" + list.get(intValue).getDate());
         mLocation.setText("" + list.get(intValue).getLongitude() + ", " + list.get(intValue).getLatitude());
 
         //display relevant info according to the report type

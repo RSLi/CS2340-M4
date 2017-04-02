@@ -38,6 +38,8 @@
         <activity android:name=".Controllers.CreateWaterSourceReportActivity" />
         <activity android:name=".Controllers.ViewReportActivity" />
         <activity android:name=".Controllers.ViewPurityReportListActivity" />
+        <activity android:name=".Controllers.HistoricalReportFilter" />
+        <activity android:name=".Controllers.ViewHistoricalReportActivity" />
         <activity
             android:name=".Controllers.ViewSourceReportListActivity"
             android:label="@string/title_activity_view_report"

@@ -1,5 +1,6 @@
 package com.example.m4.models;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -9,6 +10,8 @@ public abstract class Report {
     private String reporterUsername;
     private int reportNumber;
     private Date date;
+    private int year;
+    private int month;
     private String location;
     private double latitude;
     private double longitude;
@@ -29,13 +32,19 @@ public abstract class Report {
         this.reportNumber = reportNumber;
     }
 
-    public Date getDate() {
-        return date;
-    }
+    public Date getDate() { return date;}
 
     public void setDate(Date date) {
         this.date = date;
     }
+
+    public void setYear(int year) {this.year = year;}
+
+    public int getYear() {return year;}
+
+    public int getMonth() {return month;}
+
+    public void setMonth(int month) {this.month = month;}
 
     public String getLocation() {
         return location;

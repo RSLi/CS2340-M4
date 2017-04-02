@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView27"
+        android:layout_below="@+id/spinner_year"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="85dp"
+        android:text="Location:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Spinner
+        android:id="@+id/spinner_Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/btn_submit" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_below="@+id/textView24"
+        android:layout_marginTop="18dp"
+        android:text="Year:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView27"
+        android:layout_alignStart="@+id/spinner_Location" />
+
+</RelativeLayout>

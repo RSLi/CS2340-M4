@@ -57,6 +57,23 @@ public class ViewReportActivity extends AppCompatActivity{
             }
         });
 
+        Button btnViewHistoryReport = (Button) findViewById(R.id.btn_historical_report);
+        //add permission that only manager can view historical reports
+        btnViewHistoryReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Models.getAccountInSession().hasPermission(Permission.ACCESS_HISTORICAL_REPORT)) {
+                    Intent intent = new Intent(ViewReportActivity.this, HistoricalReportFilter.class);
+                    startActivity(intent);
+                } else {
+                    new AlertDialog.Builder(ViewReportActivity.this)
+                            .setTitle("No Permission")
+                            .setMessage("Only Managers can view Historical Reports").show();
+                }
+
+            }
+        });
+
         Button btnViewWaterAvail = (Button) findViewById(R.id.btn_water_availability);
         //set buttons
         btnViewWaterAvail.setOnClickListener(new View.OnClickListener() {
