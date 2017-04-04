@@ -285,7 +285,7 @@ public class DataBaseRequests {
     }
 
     public static void createPurityReport(final Context context, final WaterPurityReport waterPurity){
-        String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/addreport";
 
         StringRequest stringRequest = new StringRequest
                 (Request.Method.POST, myURL, new Response.Listener<String>() {
@@ -344,7 +344,7 @@ public class DataBaseRequests {
     }
 
     public static void createSourceReport(final Context context, final WaterSourceReport waterSource){
-        String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/addreport";
 
         StringRequest stringRequest = new StringRequest
                 (Request.Method.POST, myURL, new Response.Listener<String>() {
