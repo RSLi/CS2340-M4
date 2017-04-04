@@ -176,7 +176,7 @@ public class DataBaseRequests {
 
 
 
-    public static void getReport(final Context context){
+    public static void getReports(final Context context){
         String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
