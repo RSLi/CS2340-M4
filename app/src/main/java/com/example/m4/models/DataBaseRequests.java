@@ -53,7 +53,7 @@ public class DataBaseRequests {
                                 String email = user.getString("email");
                                 String accountType = user.getString("account_type");
 
-                                AccountType newAccount = new User();
+                                AccountType newAccount;
 
                                 if (accountType.equals("Administrator")) {
                                     newAccount = new Administrator();
@@ -136,7 +136,7 @@ public class DataBaseRequests {
                 }){
                     @Override
                     protected Map<String,String> getParams(){
-                        Map<String, String> params = new HashMap<String, String>();
+                        Map<String, String> params = new HashMap<>();
                         params.put("user_name", user.getUsername());
                         params.put("password", user.getPassword());
                         params.put("account_type", ((User)user).getType());
@@ -155,7 +155,7 @@ public class DataBaseRequests {
 
                     @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
-                        HashMap<String, String> headers = new HashMap<String, String>();
+                        HashMap<String, String> headers = new HashMap<>();
                         headers.put("Content-Type", "application/x-www-form-urlencoded");
                         //headers.put("Content-Type", "application/json; charset=utf-8");
                         return headers;
@@ -264,9 +264,7 @@ public class DataBaseRequests {
 
 
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        } catch (ParseException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
 
@@ -307,7 +305,8 @@ public class DataBaseRequests {
                 }){
             @Override
             protected Map<String,String> getParams(){
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
+                params.put("report_number", Integer.toString(waterPurity.getReportNumber()));
                 params.put("report_type", "Water Purity Report");
                 params.put("water_condition", waterPurity.getWaterOverallCondition().toString());
                 params.put("virus_ppm", waterPurity.getVirusPPM().toString());
@@ -326,7 +325,7 @@ public class DataBaseRequests {
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
+                HashMap<String, String> headers = new HashMap<>();
                 headers.put("Content-Type", "application/x-www-form-urlencoded");
                 //headers.put("Content-Type", "application/json; charset=utf-8");
                 return headers;
@@ -352,7 +351,7 @@ public class DataBaseRequests {
                     public void onResponse(String response) {
                         Toast out = Toast.makeText(context, "Report Successfully Added", Toast.LENGTH_SHORT);
                         out.show();
-                        System.out.println(response.toString());
+                        System.out.println(response);
                     }
                 }, new Response.ErrorListener() {
 
@@ -366,8 +365,9 @@ public class DataBaseRequests {
                 }){
             @Override
             protected Map<String,String> getParams(){
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("report_type", "Water Source Report");
+                params.put("report_number", Integer.toString(waterSource.getReportNumber()));
                 params.put("water_condition", waterSource.getWaterCondition().toString());
                 params.put("virus_ppm", "None");
                 params.put("contaminant_ppm", "None");
@@ -385,7 +385,7 @@ public class DataBaseRequests {
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
+                HashMap<String, String> headers = new HashMap<>();
                 headers.put("Content-Type", "application/x-www-form-urlencoded");
                 //headers.put("Content-Type", "application/json; charset=utf-8");
                 return headers;
