@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.m4.R;
+import com.example.m4.models.DataBaseRequests;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -28,6 +29,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 goToRegister();
             }
         });
+        DataBaseRequests.registerUsers(this);
     }
 
     //methods for intent

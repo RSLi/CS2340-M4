@@ -18,14 +18,14 @@ import org.json.JSONObject;
 
 public class DataBaseRequests {
 
-    public String url = "http://nstoltzfus3.pythonanywhere.com/";
+    //public static String url = "http://nstoltzfus3.pythonanywhere.com/";
 
 
-    public void getUsers(final Context context){
-        String myURL = url + "getusers";
+    public static void registerUsers(final Context context){
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/getusers";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, myURL, null, new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
