@@ -195,6 +195,9 @@ public class DataBaseRequests {
 
                             for (int i = 0; i < allReports.length(); i++) {
                                 JSONObject report = (JSONObject) allReports.get(i);
+                                if (report == null) {
+                                    System.out.println("This report is null");
+                                }
                                 String reportType = report.getString("report_type");
                                 String waterCondition = report.getString("water_condition");
                                 Double virusPPM = report.getDouble("virus_ppm");
@@ -213,11 +216,7 @@ public class DataBaseRequests {
                                 System.out.println(waterCondition);
                                 System.out.println(reporterUser);
                                 System.out.println(reportNumber);
-
-                                if (allReports.get(i) == null) {
-                                    System.out.println("This report is null");
-                                }
-
+                                
                                 boolean addReport;
                                 if (reportType.equals("Water Purity Report")) {
                                     WaterPurityReport newReport = new WaterPurityReport();
