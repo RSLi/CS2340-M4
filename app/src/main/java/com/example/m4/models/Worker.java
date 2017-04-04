@@ -16,4 +16,8 @@ public class Worker extends User
     public boolean hasPermission(Permission permission) {
         return this.permissions.contains(permission);
     }
+
+    public String getType() {
+        return "Worker";
+    }
 }

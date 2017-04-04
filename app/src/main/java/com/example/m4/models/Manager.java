@@ -20,4 +20,8 @@ public class Manager extends Worker
     public boolean hasPermission(Permission permission) {
         return this.permissions.contains(permission);
     }
+
+    public String getType() {
+        return "Manager";
+    }
 }

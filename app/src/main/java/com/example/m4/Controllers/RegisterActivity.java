@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.example.m4.R;
 import com.example.m4.models.AccountType;
 import com.example.m4.models.Administrator;
+import com.example.m4.models.DataBaseRequests;
 import com.example.m4.models.Manager;
 import com.example.m4.models.Models;
 import com.example.m4.models.User;
@@ -126,6 +127,7 @@ public class RegisterActivity extends AppCompatActivity {
             new AlertDialog.Builder(RegisterActivity.this)
                     .setTitle("Register Success")
                     .setMessage("Go to login screen to proceed").show();
+            DataBaseRequests.addUser(this, newAccount);
         } else {
             new AlertDialog.Builder(RegisterActivity.this)
                     .setTitle("Register Failure")

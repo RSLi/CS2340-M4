@@ -28,4 +28,8 @@ public class Administrator extends User
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getType() {
+        return "Administrator";
+    }
 }

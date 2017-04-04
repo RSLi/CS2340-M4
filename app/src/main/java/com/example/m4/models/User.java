@@ -67,5 +67,8 @@ public class User implements AccountType
         this.profileData = data;
     }
 
+    public String getType() {
+        return "User";
+    }
 
 }
