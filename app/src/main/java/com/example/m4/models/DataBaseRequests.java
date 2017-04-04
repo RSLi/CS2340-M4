@@ -317,7 +317,7 @@ public class DataBaseRequests {
                 params.put("date", waterPurity.getDate().toString());
                 params.put("year", Integer.toString(waterPurity.getYear()));
                 params.put("month", Integer.toString(waterPurity.getMonth()));
-                params.put("location", waterPurity.getLocation());
+                params.put("location", Double.toString(waterPurity.getLatitude()) + ',' + Double.toString(waterPurity.getLongitude()));
                 params.put("latitude", Double.toString(waterPurity.getLatitude()));
                 params.put("longitude", Double.toString(waterPurity.getLongitude()));
 
@@ -376,7 +376,7 @@ public class DataBaseRequests {
                 params.put("date", waterSource.getDate().toString());
                 params.put("year", Integer.toString(waterSource.getYear()));
                 params.put("month", Integer.toString(waterSource.getMonth()));
-                params.put("location", waterSource.getLocation());
+                params.put("location", Double.toString(waterSource.getLatitude()) + ', ' + Double.toString(waterSource.getLongitude()));
                 params.put("latitude", Double.toString(waterSource.getLatitude()));
                 params.put("longitude", Double.toString(waterSource.getLongitude()));
 
