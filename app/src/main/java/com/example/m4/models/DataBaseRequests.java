@@ -184,9 +184,9 @@ public class DataBaseRequests {
 
                     @Override
                     public void onResponse(JSONObject response) {
+                        Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
+                        out.show();
                         try {
-                            Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
-                            out.show();
 
                             JSONArray allReports = response.getJSONArray("allReports");
 
@@ -206,6 +206,10 @@ public class DataBaseRequests {
                                 String location = report.getString("location");
                                 Double latitude = report.getDouble("latitude");
                                 Double longitude = report.getDouble("longitude");
+
+                                System.out.println(waterCondition);
+                                System.out.println(reporterUser);
+                                System.out.println(reportNumber);
 
                                 boolean addReport;
                                 if (reportType.equals("Water Purity Report")) {
