@@ -376,7 +376,7 @@ public class DataBaseRequests {
                 params.put("date", waterSource.getDate().toString());
                 params.put("year", Integer.toString(waterSource.getYear()));
                 params.put("month", Integer.toString(waterSource.getMonth()));
-                params.put("location", Double.toString(waterSource.getLatitude()) + ', ' + Double.toString(waterSource.getLongitude()));
+                params.put("location", Double.toString(waterSource.getLatitude()) + ',' + Double.toString(waterSource.getLongitude()));
                 params.put("latitude", Double.toString(waterSource.getLatitude()));
                 params.put("longitude", Double.toString(waterSource.getLongitude()));
 
