@@ -17,4 +17,5 @@ public enum WaterOverallCondition
     {
         return this.string;
     }
+
 }

@@ -176,7 +176,7 @@ public class DataBaseRequests {
 
 
 
-    public static void createReport(final Context context){
+    public static void getReport(final Context context){
         String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
@@ -207,8 +207,9 @@ public class DataBaseRequests {
                                 Double latitude = report.getDouble("latitude");
                                 Double longitude = report.getDouble("longitude");
 
+                                boolean addReport;
                                 if (reportType.equals("Water Purity Report")) {
-                                   WaterPurityReport newReport = new WaterPurityReport();
+                                    WaterPurityReport newReport = new WaterPurityReport();
                                     newReport.setWaterOverallCondition(WaterOverallCondition.valueOf(waterCondition));
                                     newReport.setVirusPPM(virusPPM);
                                     newReport.setContaminantPPM(contaminantPPM);
@@ -218,9 +219,11 @@ public class DataBaseRequests {
                                     newReport.setYear(year);
                                     newReport.setMonth(month);
                                     newReport.setLocation(location);
-                                    newReport.setLongitude(longitude);
                                     newReport.setLatitude(latitude);
-                                    boolean addReport = Models.submitReport(newReport);
+                                    newReport.setLongitude(longitude);
+
+                                    addReport = Models.submitReport(newReport);
+                                    System.out.println(addReport);
 
 
                                 } else if (reportType.equals("Water Source Report")) {
@@ -233,13 +236,18 @@ public class DataBaseRequests {
                                     newReport.setYear(year);
                                     newReport.setMonth(month);
                                     newReport.setLocation(location);
-                                    newReport.setLongitude(longitude);
                                     newReport.setLatitude(latitude);
-                                    boolean addReport = Models.submitReport(newReport);
+                                    newReport.setLongitude(longitude);
+
+                                    addReport = Models.submitReport(newReport);
+                                    System.out.println(addReport);
+
 
 
                                 } else {
                                     System.out.println("No valid report");
+                                    System.out.println(false);
+
                                 }
 
                             }

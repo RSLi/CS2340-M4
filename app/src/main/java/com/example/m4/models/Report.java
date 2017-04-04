@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Report object containing common report information
  */
-public abstract class Report {
+public class Report {
     private String reporterUsername;
     private int reportNumber;
     private Date date;
@@ -15,6 +15,21 @@ public abstract class Report {
     private String location;
     private double latitude;
     private double longitude;
+
+    public Report() {
+        //default constructor
+    }
+
+    public Report(String reporterUsername, int reportNumber, Date date, int year, int month,
+                  String location, double latitude, double longitude) {
+        this.reporterUsername = reporterUsername;
+        this.reportNumber = reportNumber;
+        this.date = date;
+        this.month = month;
+        this.location = location;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 
     public String getReporterUsername() {
         return reporterUsername;
@@ -74,10 +89,16 @@ public abstract class Report {
         this.longitude = longitude;
     }
 
+    public String getType() {
+        return "Report";
+    }
+
     /**
      * Check if the data in the report is valid
      * @return true if data is valid to be inserted
      */
-    abstract public boolean isValid();
+    public boolean isValid() {
+        return true;
+    }
 
 }

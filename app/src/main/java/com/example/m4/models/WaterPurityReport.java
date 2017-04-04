@@ -64,4 +64,9 @@ public class WaterPurityReport extends Report
         }
         return false;
     }
+
+    @Override
+    public String getType() {
+        return "Water Purity Report";
+    }
 }

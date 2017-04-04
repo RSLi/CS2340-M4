@@ -46,4 +46,9 @@ public class WaterSourceReport extends Report
         if (waterCondition != null && waterType != null) { return true;}
         return false;
     }
+
+    @Override
+    public String getType() {
+        return "Water Source Report";
+    }
 }
