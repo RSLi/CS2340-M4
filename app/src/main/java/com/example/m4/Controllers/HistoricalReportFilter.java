@@ -25,10 +25,16 @@ public class HistoricalReportFilter extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_report_filter);
+
+        //get all reports
         ArrayList<Report> allReportsList = Models.getReportsAsList();
         final ArrayList<WaterPurityReport> purityReportList = new ArrayList<>();
+
+        //These two locations and years Arraylists are used to display spinner choices to managers for history report filter.
         final ArrayList<String> locations = new ArrayList<>();
         ArrayList<Integer> years = new ArrayList<>();
+
+        //for each report, if it is a waterpurityreport, add the year and location to Arraylists if they are not in it yet.
         for (Report r: allReportsList) {
             if (r instanceof WaterPurityReport) {
                 purityReportList.add((WaterPurityReport) r);
@@ -41,6 +47,7 @@ public class HistoricalReportFilter extends AppCompatActivity{
                 }
             }
         }
+        //add choices to spinners
         final Spinner locationSpinner = (Spinner) findViewById(R.id.spinner_Location);
         final Spinner yearSpinner = (Spinner) findViewById(R.id.spinner_year);
         ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(this,
@@ -52,6 +59,7 @@ public class HistoricalReportFilter extends AppCompatActivity{
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);
 
+        //When submit, save the selected Location and Year for the next intent
         Button submit = (Button) findViewById(R.id.btn_submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -26,12 +26,17 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_report);
-        Intent mIntent = getIntent();
+
         //get the year and location from last intent
+        Intent mIntent = getIntent();
         int year = mIntent.getIntExtra("Year", 0);
         String location = mIntent.getStringExtra("Location");
+
+        //get all reports
         ArrayList<Report> allReportList = Models.getReportsAsList();
         final ArrayList<WaterPurityReport> historyReport = new ArrayList<>();
+
+        //for all reports, choose the ones that match the year and location selected by managers
         for (Report r: allReportList) {
             String rLocation = "" + r.getLongitude() + ", " + r.getLatitude();
             if (r instanceof WaterPurityReport && rLocation.equals(location) && r.getYear() == year) {
@@ -39,17 +44,23 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
             }
         }
 
+        //create a graph
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        //graph.get
         //int size = historyReport.size();
+        //create datapoint lists
         DataPoint[] virusList = new DataPoint[13];
         DataPoint[] contamList = new DataPoint[13];
+        //add (0,0) to the datapoint lists for month 0(invalid)
         virusList[0] = new DataPoint(0,0);
         contamList[0] = new DataPoint(0,0);
         DataPoint vdp;
         DataPoint cdp;
         double virusTotal = 0;
         double contamTotal = 0;
+
+        //Add datapoints to the graph.
+        //The system will display an XY graph where the X axis is the month and the Y axis is the PPM.
+        // Each month's data point can be an average of the reports for that month if there are more than one.
         ArrayList<WaterPurityReport> d = new ArrayList<>();
         for (int i = 1; i < 13; i++) {
             virusTotal = 0;
@@ -63,6 +74,7 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
                     //count += 1;
                 }
             }
+            //if there are no reports in this month
             if (virusTotal == 0 && contamTotal == 0) {
                 virusList[i] = new DataPoint(i,0);
                 contamList[i] = new DataPoint(i,0);
@@ -75,7 +87,7 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
                 contamList[i] = cdp;
             }
         }
-        //draw VirusPPM line
+        //draw VirusPPM line and set up some attributes
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(virusList);
         series.setTitle("Virus PPM");
         series.setColor(Color.RED);
@@ -83,12 +95,14 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         series.setDataPointsRadius(10);
         series.setThickness(8);
         graph.addSeries(series);
+
+        //set up the coordinate view
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
         gridLabel.setHorizontalAxisTitle("Month");
         gridLabel.setNumHorizontalLabels(13);
         gridLabel.setPadding(40); // should allow for 3 digits to fit on screen
 
-        //draw ContaminantPPM line
+        //draw ContaminantPPM line and set up some attributes
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(contamList);
         series2.setTitle("Contaminant PPM");
         series2.setColor(Color.BLUE);
