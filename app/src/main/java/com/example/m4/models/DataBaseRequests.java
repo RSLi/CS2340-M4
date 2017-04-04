@@ -1,12 +1,15 @@
 package com.example.m4.models;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,6 +18,8 @@ import org.json.JSONObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by nickstoltz on 4/4/17.
@@ -91,6 +96,85 @@ public class DataBaseRequests {
                 });
         MySingleton.getInstance(context).addToRequestQueue(jsObjRequest);
     }
+
+    public static void addUser(final Context context, final AccountType user){
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/adduser";
+
+        //Map<String, String> params = new HashMap<>();
+
+//        params.put("user_name", user.getUsername());
+//        params.put("password", user.getPassword());
+//        params.put("account_type", ((User)user).getType());
+//        if (user.getProfileData() != null) {
+//            params.put("address", user.getProfileData().get("address").toString());
+//            params.put("title", user.getProfileData().get("title").toString());
+//            params.put("email", user.getProfileData().get("email").toString());
+//        } else {
+//            params.put("address", "");
+//            params.put("title", "");
+//            params.put("email", "");
+//        }
+//
+//        JSONObject jsonObj = new JSONObject(params);
+        StringRequest stringRequest = new StringRequest
+        (Request.Method.POST, myURL, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast out = Toast.makeText(context, "User Successfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        System.out.println(response.toString());
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast out = Toast.makeText(context, "User Unsuccessfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        // TODO Auto-generated method stub
+
+                    }
+                }){
+                    @Override
+                    protected Map<String,String> getParams(){
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("user_name", user.getUsername());
+                        params.put("password", user.getPassword());
+                        params.put("account_type", ((User)user).getType());
+                        if (user.getProfileData() != null) {
+                            params.put("address", user.getProfileData().get("address").toString());
+                            params.put("title", user.getProfileData().get("title").toString());
+                            params.put("email", user.getProfileData().get("email").toString());
+                        } else {
+                            params.put("address", "");
+                            params.put("title", "");
+                            params.put("email", "");
+                        }
+
+                        return params;
+                    }
+
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        HashMap<String, String> headers = new HashMap<String, String>();
+                        headers.put("Content-Type", "application/x-www-form-urlencoded");
+                        //headers.put("Content-Type", "application/json; charset=utf-8");
+                        return headers;
+                    }
+
+                    @Override
+                    public String getBodyContentType() {
+                        return "application/json";
+                    }
+
+        };
+        System.out.println("Object Request:  " + stringRequest.toString());
+        Log.d("Debug", "Object Request:  " + stringRequest.toString());
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+    }
+
+
+
+
 
     public static void createReport(final Context context){
         String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
