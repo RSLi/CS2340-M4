@@ -31,6 +31,8 @@ public class DataBaseRequests {
                     public void onResponse(JSONObject response) {
                         try {
                             Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
+                            out.show();
+
                             JSONArray allUsers = response.getJSONArray("allUsers");
 
                             for (int i = 0; i < allUsers.length(); i++) {
@@ -54,8 +56,13 @@ public class DataBaseRequests {
                                     newAccount = new User();
                                 }
 
+                                System.out.println("Username: " + username);
+                                System.out.println("Password: " + password);
+                                System.out.println("accountType: " + newAccount);
+
                                 newAccount.setUsername(username);
                                 newAccount.setPassword(password);
+
 
                                 boolean registerSuccess = Models.register(newAccount);
 
@@ -73,6 +80,7 @@ public class DataBaseRequests {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast out = Toast.makeText(context, "Database Connection Failed", Toast.LENGTH_SHORT);
+                        out.show();
                         // TODO Auto-generated method stub
 
                     }
