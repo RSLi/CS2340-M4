@@ -202,7 +202,7 @@ public class DataBaseRequests {
                                 String waterCondition = report.getString("water_condition");
                                 Double virusPPM = report.getDouble("virus_ppm");
                                 Double contaminantPPM = report.getDouble("contaminant_ppm");
-                                String waterType = report.getString("waterType");
+                                String waterType = report.getString("water_type");
                                 String reporterUser = report.getString("reporter_username");
                                 Integer reportNumber = report.getInt("report_number");
                                 String dateString = report.getString("date");
