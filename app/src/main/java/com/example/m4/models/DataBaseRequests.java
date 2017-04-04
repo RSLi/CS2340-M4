@@ -39,7 +39,7 @@ public class DataBaseRequests {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
+                            Toast out = Toast.makeText(context, "User Database Connection Successful", Toast.LENGTH_SHORT);
                             out.show();
 
                             JSONArray allUsers = response.getJSONArray("allUsers");
@@ -184,11 +184,14 @@ public class DataBaseRequests {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
+                        Toast out = Toast.makeText(context, "Report Database Connection Successful", Toast.LENGTH_SHORT);
                         out.show();
                         try {
 
                             JSONArray allReports = response.getJSONArray("allReports");
+                            if (allReports == null) {
+                                System.out.println("All reports are null");
+                            }
 
                             for (int i = 0; i < allReports.length(); i++) {
                                 JSONObject report = (JSONObject) allReports.get(i);
@@ -210,6 +213,10 @@ public class DataBaseRequests {
                                 System.out.println(waterCondition);
                                 System.out.println(reporterUser);
                                 System.out.println(reportNumber);
+
+                                if (allReports.get(i) == null) {
+                                    System.out.println("This report is null");
+                                }
 
                                 boolean addReport;
                                 if (reportType.equals("Water Purity Report")) {
