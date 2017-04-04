@@ -1,6 +1,7 @@
 package com.example.m4.models;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -20,7 +21,7 @@ public class DataBaseRequests {
     public String url = "http://nstoltzfus3.pythonanywhere.com/";
 
 
-    public void getUsers(Context context){
+    public void getUsers(final Context context){
         String myURL = url + "getusers";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
@@ -29,6 +30,7 @@ public class DataBaseRequests {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+                            Toast out = Toast.makeText(context, "Database Connection Successful", Toast.LENGTH_SHORT);
                             JSONArray allUsers = response.getJSONArray("allUsers");
 
                             for (int i = 0; i < allUsers.length(); i++) {
@@ -70,6 +72,7 @@ public class DataBaseRequests {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        Toast out = Toast.makeText(context, "Database Connection Failed", Toast.LENGTH_SHORT);
                         // TODO Auto-generated method stub
 
                     }
