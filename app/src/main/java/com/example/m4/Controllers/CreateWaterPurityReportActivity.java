@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.m4.R;
+import com.example.m4.models.DataBaseRequests;
 import com.example.m4.models.Models;
 import com.example.m4.models.WaterOverallCondition;
 import com.example.m4.models.WaterPurityReport;
@@ -60,6 +61,7 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
 //                //for testing other month, uncomment this line
 //                report.setMonth(Integer.parseInt(month.getText().toString()));
                 Models.submitReport(report);
+                createPurityDB();
                 Intent intent = new Intent(CreateWaterPurityReportActivity.this, CreateReportActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -75,5 +77,9 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void createPurityDB() {
+        DataBaseRequests.createPurityReport(this, report);
     }
 }

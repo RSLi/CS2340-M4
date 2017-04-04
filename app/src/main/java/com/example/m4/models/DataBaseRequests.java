@@ -283,4 +283,123 @@ public class DataBaseRequests {
                 });
         MySingleton.getInstance(context).addToRequestQueue(jsObjRequest);
     }
+
+    public static void createPurityReport(final Context context, final WaterPurityReport waterPurity){
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
+
+        StringRequest stringRequest = new StringRequest
+                (Request.Method.POST, myURL, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast out = Toast.makeText(context, "Report Successfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        System.out.println(response.toString());
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast out = Toast.makeText(context, "Report Unsuccessfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        // TODO Auto-generated method stub
+
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("report_type", "Water Purity Report");
+                params.put("water_condition", waterPurity.getWaterOverallCondition().toString());
+                params.put("virus_ppm", waterPurity.getVirusPPM().toString());
+                params.put("contaminant_ppm", waterPurity.getContaminantPPM().toString());
+                params.put("water_type", "None");
+                params.put("reporter_username", waterPurity.getReporterUsername());
+                params.put("date", waterPurity.getDate().toString());
+                params.put("year", Integer.toString(waterPurity.getYear()));
+                params.put("month", Integer.toString(waterPurity.getMonth()));
+                params.put("location", waterPurity.getLocation());
+                params.put("latitude", Double.toString(waterPurity.getLatitude()));
+                params.put("longitude", Double.toString(waterPurity.getLongitude()));
+
+                return params;
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/x-www-form-urlencoded");
+                //headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+
+            @Override
+            public String getBodyContentType() {
+                return "application/json";
+            }
+
+        };
+        System.out.println("Object Request:  " + stringRequest.toString());
+        Log.d("Debug", "Object Request:  " + stringRequest.toString());
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+    }
+
+    public static void createSourceReport(final Context context, final WaterSourceReport waterSource){
+        String myURL = "http://nstoltzfus3.pythonanywhere.com/getreports";
+
+        StringRequest stringRequest = new StringRequest
+                (Request.Method.POST, myURL, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast out = Toast.makeText(context, "Report Successfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        System.out.println(response.toString());
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast out = Toast.makeText(context, "Report Unsuccessfully Added", Toast.LENGTH_SHORT);
+                        out.show();
+                        // TODO Auto-generated method stub
+
+                    }
+                }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("report_type", "Water Source Report");
+                params.put("water_condition", waterSource.getWaterCondition().toString());
+                params.put("virus_ppm", "None");
+                params.put("contaminant_ppm", "None");
+                params.put("water_type", waterSource.getWaterType().toString());
+                params.put("reporter_username", waterSource.getReporterUsername());
+                params.put("date", waterSource.getDate().toString());
+                params.put("year", Integer.toString(waterSource.getYear()));
+                params.put("month", Integer.toString(waterSource.getMonth()));
+                params.put("location", waterSource.getLocation());
+                params.put("latitude", Double.toString(waterSource.getLatitude()));
+                params.put("longitude", Double.toString(waterSource.getLongitude()));
+
+                return params;
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/x-www-form-urlencoded");
+                //headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+
+            @Override
+            public String getBodyContentType() {
+                return "application/json";
+            }
+
+        };
+        System.out.println("Object Request:  " + stringRequest.toString());
+        Log.d("Debug", "Object Request:  " + stringRequest.toString());
+        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+    }
+
 }

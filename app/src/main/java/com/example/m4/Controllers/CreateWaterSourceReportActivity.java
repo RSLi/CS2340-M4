@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.m4.R;
+import com.example.m4.models.DataBaseRequests;
 import com.example.m4.models.Models;
 import com.example.m4.models.WaterCondition;
 import com.example.m4.models.WaterSourceReport;
@@ -56,6 +57,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
                 report.setLongitude(Double.parseDouble(longitude.getText().toString()));
                 report.setLatitude(Double.parseDouble(latitude.getText().toString()));
                 Models.submitReport(report);
+                addSourceDB();
+
                 Intent intent = new Intent(CreateWaterSourceReportActivity.this, CreateReportActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
@@ -72,5 +75,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void addSourceDB() {
+        DataBaseRequests.createSourceReport(this, report);
     }
 }
