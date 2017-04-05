@@ -92,8 +92,8 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         series.setTitle("Virus PPM");
         series.setColor(Color.RED);
         series.setDrawDataPoints(true);
-        series.setDataPointsRadius(10);
-        series.setThickness(8);
+        series.setDataPointsRadius(12);
+        series.setThickness(10);
         graph.addSeries(series);
 
         //set up the coordinate view
@@ -107,8 +107,8 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         series2.setTitle("Contaminant PPM");
         series2.setColor(Color.BLUE);
         series2.setDrawDataPoints(true);
-        series2.setDataPointsRadius(10);
-        series2.setThickness(8);
+        series2.setDataPointsRadius(9);
+        series2.setThickness(6);
         graph.addSeries(series2);
         gridLabel.setVerticalAxisTitle("PPM");
         gridLabel.setVerticalAxisTitleTextSize((float)30);
