@@ -34,11 +34,13 @@ public class EditProfileActivity extends AppCompatActivity
 
         //once submit is clicked, new info is added to the hashmap
         mBtnSaveProfile.setOnClickListener(new View.OnClickListener() {
+            @SuppressWarnings("unchecked")
             @Override
             public void onClick(View view) {
                 HashMap newProfileData = new HashMap();
                 Boolean ifSave = true;
                 if (isValidEmail(mFieldProfileEmail.getText().toString())) {
+                    //noinspection unchecked
                     newProfileData.put("email", mFieldProfileEmail.getText().toString());
                 } else {
                     new AlertDialog.Builder(EditProfileActivity.this)

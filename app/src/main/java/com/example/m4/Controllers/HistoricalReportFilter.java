@@ -27,7 +27,7 @@ public class HistoricalReportFilter extends AppCompatActivity{
         setContentView(R.layout.activity_historical_report_filter);
 
         //get all reports
-        ArrayList<Report> allReportsList = Models.getReportsAsList();
+        @SuppressWarnings("unchecked") ArrayList<Report> allReportsList = Models.getReportsAsList();
         final ArrayList<WaterPurityReport> purityReportList = new ArrayList<>();
 
         //These two locations and years Arraylists are used to display spinner choices to managers for history report filter.

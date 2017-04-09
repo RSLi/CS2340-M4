@@ -33,6 +33,7 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         String location = mIntent.getStringExtra("Location");
 
         //get all reports
+        //noinspection unchecked
         ArrayList<Report> allReportList = Models.getReportsAsList();
         final ArrayList<WaterPurityReport> historyReport = new ArrayList<>();
 

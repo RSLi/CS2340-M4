@@ -29,6 +29,7 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
         //add all the purity reports into a list
         // if in API 24+:
         // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterPurityReport).collect(Collectors.toList());
+        //noinspection unchecked
         ArrayList<Report> allReportList = Models.getReportsAsList();
         final ArrayList<WaterPurityReport> profileData = new ArrayList<WaterPurityReport>();
         for (Report report : allReportList) {
@@ -39,6 +40,7 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
 
         // display list of purity reports
         final ListView listview = (ListView) findViewById(R.id.report_list);
+        //noinspection unchecked
         final ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, profileData);
         listview.setAdapter(adapter);

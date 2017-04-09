@@ -37,6 +37,7 @@ public class ViewOneReport extends AppCompatActivity {
         //get the report number of the clicked report
         int intValue = mIntent.getIntExtra("reportNo", 0);
         //get report from reportList
+        //noinspection unchecked
         list = Models.getReportsAsList();
 
         //get buttons and textviews

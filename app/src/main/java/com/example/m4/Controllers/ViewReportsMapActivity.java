@@ -29,6 +29,7 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        //noinspection unchecked
         mReports = Models.getReportsAsList();
         mapFragment.getMapAsync(this);
     }
@@ -43,6 +44,7 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
