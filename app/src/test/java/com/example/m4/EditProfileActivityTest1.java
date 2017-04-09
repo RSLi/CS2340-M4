@@ -12,7 +12,7 @@ public class EditProfileActivityTest1 {
 
     /**
      * Test for valid email address entry
-     * @throws Exception
+     * @throws Exception throw exception when email not valid
      */
     @Test
     public void emailValidationTest() throws Exception{
@@ -25,7 +25,7 @@ public class EditProfileActivityTest1 {
 
     /**
      * Test for exception
-     * @throws Exception
+     * @throws Exception throw exception when email null
      */
     @Test (expected = IllegalArgumentException.class)
     public void emailExceptionTest() throws Exception {
@@ -35,7 +35,7 @@ public class EditProfileActivityTest1 {
 
     /**
      * Test for invalid email address entry
-     * @throws Exception
+     * @throws Exception throw exception when email not valid
      */
     @Test
     public void emailInvalidation() throws Exception {
