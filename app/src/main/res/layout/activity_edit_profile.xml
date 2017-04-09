@@ -16,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/field_profile_title"
+        android:labelFor="@+id/field_profile_email"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/field_profile_title"
         android:ems="10"
@@ -35,6 +36,7 @@
 
     <EditText
         android:id="@+id/field_profile_title"
+        android:labelFor="@+id/field_profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/field_profile_address"
@@ -57,6 +59,7 @@
 
     <EditText
         android:id="@+id/field_profile_address"
+        android:labelFor="@+id/field_profile_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_save_profile"
