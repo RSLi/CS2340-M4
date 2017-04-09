@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Create Report"
+        android:text="@string/create_report_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="69dp"
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Water Source Report"
+        android:text="@string/create_report_btn_water_source_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
@@ -24,7 +24,7 @@
         android:id="@+id/btn_create_water_source_report" />
 
     <Button
-        android:text="Water Purity Report"
+        android:text="@string/create_report_btn_water_purity_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_create_water_purity_report"
@@ -33,7 +33,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Cancel"
+        android:text="@string/all_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_cancel"
