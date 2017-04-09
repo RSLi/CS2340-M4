@@ -37,7 +37,7 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         spWaterCondition.setAdapter(new ArrayAdapter<WaterCondition>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
         //get info user typed in
         final EditText longitude = (EditText) findViewById(R.id.edit_longitude);
-        final EditText latitude = (EditText) findViewById(R.id.edit_latitute);
+        final EditText latitude = (EditText) findViewById(R.id.edit_latitude);
 
         //display reporter name, report number, and dateTime on screen by autogenerating
         TextView reporter = (TextView) findViewById((R.id.field_source_reporter));

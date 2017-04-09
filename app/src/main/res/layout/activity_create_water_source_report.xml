@@ -128,12 +128,8 @@
         android:layout_height="wrap_content"
         android:inputType="number|numberDecimal"
         android:ems="10"
-<<<<<<< HEAD
-        android:id="@+id/edit_longitute"
-        android:labelFor="@+id/edit_longitute"
-=======
         android:id="@+id/edit_longitude"
->>>>>>> origin/master
+        android:labelFor="@+id/edit_longitude"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView38"
         android:layout_alignBottom="@+id/textView38"
@@ -183,20 +179,13 @@
         android:id="@+id/edit_latitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:inputType="number|numberDecimal"
         android:ems="10"
-        android:id="@+id/edit_latitute"
-        android:labelFor="@+id/edit_latitute"
+        android:labelFor="@+id/edit_latitude"
         android:textAppearance="@style/TextAppearance.AppCompat"
-=======
->>>>>>> origin/master
         android:layout_alignBaseline="@+id/textView21"
         android:layout_alignBottom="@+id/textView21"
         android:layout_alignLeft="@+id/edit_longitude"
-        android:layout_alignStart="@+id/edit_longitude"
-        android:ems="10"
-        android:inputType="number|numberDecimal"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
+        android:layout_alignStart="@+id/edit_longitude" />
 
 </RelativeLayout>
