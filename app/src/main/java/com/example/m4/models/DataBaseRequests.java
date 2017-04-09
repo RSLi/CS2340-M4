@@ -17,6 +17,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -204,7 +205,7 @@ public class DataBaseRequests {
                                 String reporterUser = report.getString("reporter_username");
                                 Integer reportNumber = report.getInt("report_number");
                                 String dateString = report.getString("date");
-                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
                                 Integer year = report.getInt("year");
                                 Integer month = report.getInt("month");
                                 String location = report.getString("location");
