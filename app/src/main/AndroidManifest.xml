@@ -69,7 +69,7 @@
 
         <activity
             android:name=".Controllers.ViewReportsMapActivity"
-            android:label="@string/title_activity_view_reports_map"></activity>
+            android:label="@string/title_activity_view_reports_map"/>
     </application>
 
 </manifest>
