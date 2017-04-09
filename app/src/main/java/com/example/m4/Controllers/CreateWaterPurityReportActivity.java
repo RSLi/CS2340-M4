@@ -42,8 +42,8 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
         dateTime.setText(date.toString());
 
         //get the info user typed in
-        final EditText longitude = (EditText) findViewById(R.id.edit_longitute);
-        final EditText latitude = (EditText) findViewById(R.id.edit_Latitute);
+        final EditText longitude = (EditText) findViewById(R.id.edit_longitude);
+        final EditText latitude = (EditText) findViewById(R.id.edit_Latitude);
         final EditText contaminantPPM = (EditText) findViewById(R.id.edit_contaminant_PPM);
         final EditText virusPPM = (EditText) findViewById(R.id.edit_Virus_PPm);
 //        //for testing other month, uncomment this line

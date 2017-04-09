@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView32"
         android:layout_marginBottom="15dp"
-        android:layout_above="@+id/edit_longitute"
+        android:layout_above="@+id/edit_longitude"
         android:layout_alignLeft="@+id/textView38"
         android:layout_alignStart="@+id/textView38" />
 
@@ -72,8 +72,8 @@
         android:text="num"
         android:layout_alignBaseline="@+id/textView32"
         android:layout_alignBottom="@+id/textView32"
-        android:layout_alignLeft="@+id/edit_longitute"
-        android:layout_alignStart="@+id/edit_longitute"
+        android:layout_alignLeft="@+id/edit_longitude"
+        android:layout_alignStart="@+id/edit_longitude"
         android:layout_height="wrap_content" />
 
     <TextView
@@ -83,8 +83,8 @@
         android:text="name"
         android:layout_alignBaseline="@+id/textView40"
         android:layout_alignBottom="@+id/textView40"
-        android:layout_alignLeft="@+id/edit_longitute"
-        android:layout_alignStart="@+id/edit_longitute" />
+        android:layout_alignLeft="@+id/edit_longitude"
+        android:layout_alignStart="@+id/edit_longitude" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -120,16 +120,20 @@
         tools:text="Cancel"
         android:layout_alignBaseline="@+id/btn_source_submit"
         android:layout_alignBottom="@+id/btn_source_submit"
-        android:layout_alignRight="@+id/edit_longitute"
-        android:layout_alignEnd="@+id/edit_longitute" />
+        android:layout_alignRight="@+id/edit_longitude"
+        android:layout_alignEnd="@+id/edit_longitude" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number|numberDecimal"
         android:ems="10"
+<<<<<<< HEAD
         android:id="@+id/edit_longitute"
         android:labelFor="@+id/edit_longitute"
+=======
+        android:id="@+id/edit_longitude"
+>>>>>>> origin/master
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView38"
         android:layout_alignBottom="@+id/textView38"
@@ -157,35 +161,42 @@
         android:layout_toStartOf="@+id/textView28" />
 
     <TextView
-        android:text="Longitute:"
+        android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView38"
-        android:layout_marginBottom="55dp"
         android:layout_above="@+id/textView40"
         android:layout_alignLeft="@+id/textView40"
-        android:layout_alignStart="@+id/textView40" />
+        android:layout_alignStart="@+id/textView40"
+        android:layout_marginBottom="55dp"
+        android:text="Longitude:" />
 
     <TextView
-        android:text="Latitute:"
+        android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/textView38"
         android:layout_alignStart="@+id/textView38"
-        android:id="@+id/textView21" />
+        android:layout_centerVertical="true"
+        android:text="Latitude:" />
 
     <EditText
+        android:id="@+id/edit_latitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/edit_latitute"
         android:labelFor="@+id/edit_latitute"
         android:textAppearance="@style/TextAppearance.AppCompat"
+=======
+>>>>>>> origin/master
         android:layout_alignBaseline="@+id/textView21"
         android:layout_alignBottom="@+id/textView21"
-        android:layout_alignLeft="@+id/edit_longitute"
-        android:layout_alignStart="@+id/edit_longitute" />
+        android:layout_alignLeft="@+id/edit_longitude"
+        android:layout_alignStart="@+id/edit_longitude"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
 </RelativeLayout>
