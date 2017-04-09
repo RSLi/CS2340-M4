@@ -48,6 +48,7 @@ public class EditProfileActivity extends AppCompatActivity
                 }
                 newProfileData.put("address", mFieldProfileAddress.getText().toString());
                 newProfileData.put("title", mFieldProfileTitle.getText().toString());
+
                 if (ifSave) {
                     Models.accountInSession.setProfileData(newProfileData);
                     Intent intent = new Intent(EditProfileActivity.this, ViewProfileActivity.class);
@@ -76,6 +77,7 @@ public class EditProfileActivity extends AppCompatActivity
 
         }
     }
+    // Email pattern definition
     private static final Pattern EMAIL = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                     "\\@" +
@@ -86,8 +88,9 @@ public class EditProfileActivity extends AppCompatActivity
                     ")+"
     );
 
+    //Check the validation of user entered emails in profile
     public static boolean isValidEmail(String email) {
-        if (email == null) {
+        if (email == null || email == "") {
             throw new IllegalArgumentException();
         } else {
             return EMAIL.matcher(email).matches();
