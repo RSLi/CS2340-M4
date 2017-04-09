@@ -64,7 +64,7 @@ public class Models
     }
     /**
      * Add report
-     * @param report The report we wanted to submit
+     * @param report
      * @throws RuntimeException account not logged in
      * @return false if report data is missing or invalid
      */
