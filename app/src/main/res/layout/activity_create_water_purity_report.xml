@@ -4,7 +4,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:text="Purity Report"
+        android:text="@string/create_water_purity_report_title_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
@@ -19,12 +19,12 @@
         android:id="@+id/textView2"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_marginTop="19dp"
-        android:text="Create Water"
+        android:text="@string/create_water_purity_report_title_1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Report No:"
+        android:text="@string/all_report_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -34,7 +34,7 @@
         android:layout_alignStart="@+id/textView8" />
 
     <TextView
-        android:text="Reporter:"
+        android:text="@string/all_reporter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
@@ -44,7 +44,7 @@
         android:layout_alignStart="@+id/textView6" />
 
     <TextView
-        android:text="Contaminant PPM:"
+        android:text="@string/create_water_purity_report_contaminant_ppm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView12"
@@ -54,7 +54,7 @@
         android:layout_marginTop="27dp" />
 
     <TextView
-        android:text="num"
+        android:text="@string/all_placeholder_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView6"
@@ -78,7 +78,7 @@
         android:layout_marginStart="11dp" />
 
     <TextView
-        android:text="name"
+        android:text="@string/all_placeholder_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/field_purity_reporter"
@@ -88,7 +88,7 @@
         android:layout_toEndOf="@+id/textView12" />
 
     <TextView
-        android:text="date/time"
+        android:text="@string/all_date_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/field_date_time"
@@ -124,7 +124,7 @@
         android:layout_alignStart="@+id/textView7"
         android:layout_below="@+id/textView7"
         android:layout_marginTop="19dp"
-        android:text="Latitude" />
+        android:text="@string/all_latitude" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -152,7 +152,7 @@
         android:layout_alignStart="@+id/edit_Virus_PPm" />
 
     <Button
-        android:text="Submit"
+        android:text="@string/all_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_purity_submit"
@@ -162,7 +162,7 @@
         android:layout_marginTop="12dp" />
 
     <TextView
-        android:text="Virus PPM"
+        android:text="@string/create_water_purity_report_virus_ppm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -175,7 +175,7 @@
         android:id="@+id/btn_purity_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/all_cancel"
         tools:text="Cancel"
         android:layout_alignBaseline="@+id/btn_purity_submit"
         android:layout_alignBottom="@+id/btn_purity_submit"
@@ -183,7 +183,7 @@
         android:layout_alignEnd="@+id/edit_Virus_PPm"/>
 
     <TextView
-        android:text="Condition:"
+        android:text="@string/create_water_purity_report_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView9"
@@ -199,7 +199,7 @@
         android:layout_above="@+id/edit_longitude"
         android:layout_alignStart="@+id/textView9"
         android:layout_marginBottom="18dp"
-        android:text="Date/Time" />
+        android:text="@string/all_date_time" />
 
     <TextView
         android:id="@+id/textView7"
@@ -209,6 +209,6 @@
         android:layout_alignStart="@+id/textView8"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="162dp"
-        android:text="Longitude:" />
+        android:text="@string/all_longitude" />
 
 </RelativeLayout>
