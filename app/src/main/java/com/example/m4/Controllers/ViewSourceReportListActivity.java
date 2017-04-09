@@ -11,7 +11,6 @@ import android.widget.ListView;
 import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.Report;
-import com.example.m4.models.WaterPurityReport;
 import com.example.m4.models.WaterSourceReport;
 
 import java.util.ArrayList;

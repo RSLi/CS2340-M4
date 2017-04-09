@@ -1,7 +1,6 @@
 package com.example.m4.Controllers;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.Button;
 
 import com.example.m4.R;
 import com.example.m4.models.Models;
-import com.example.m4.models.Permission;
 
 public class MainAppActivity extends AppCompatActivity {
 
