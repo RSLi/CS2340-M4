@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import android.widget.ListView;
 import com.example.m4.R;
 import com.example.m4.models.Models;
 import com.example.m4.models.Report;
-import com.example.m4.models.WaterPurityReport;
+import com.example.m4.models.WaterSourceReport;
 
 import java.util.ArrayList;
 
-public class ViewPurityReportListActivity extends AppCompatActivity {
+public class ViewSourceReportListActivity extends AppCompatActivity {
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -26,19 +26,18 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_report_list);
-        //add all the purity reports into a list
+        //add all the source reports into a list
         // if in API 24+:
-        // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterPurityReport).collect(Collectors.toList());
+        // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterSourceReport).collect(Collectors.toList());
         //noinspection unchecked
         ArrayList<Report> allReportList = Models.getReportsAsList();
-        final ArrayList<WaterPurityReport> profileData = new ArrayList<WaterPurityReport>();
+        final ArrayList<WaterSourceReport> profileData = new ArrayList<WaterSourceReport>();
         for (Report report : allReportList) {
-            if (report instanceof WaterPurityReport) {
-                profileData.add((WaterPurityReport) report);
+            if (report instanceof WaterSourceReport) {
+                profileData.add((WaterSourceReport) report);
             }
         }
-
-        // display list of purity reports
+        // display list of source reports
         final ListView listview = (ListView) findViewById(R.id.report_list);
         //noinspection unchecked
         final ArrayAdapter adapter = new ArrayAdapter(this,
@@ -50,7 +49,7 @@ public class ViewPurityReportListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
                 //view one report
-                Intent intent = new Intent(ViewPurityReportListActivity.this, ViewOneReport.class);
+                Intent intent = new Intent(ViewSourceReportListActivity.this, ViewOneReport.class);
                 intent.putExtra("rowNum", arg2);
                 intent.putExtra("reportNo", profileData.get(arg2).getReportNumber());
                 startActivity(intent);

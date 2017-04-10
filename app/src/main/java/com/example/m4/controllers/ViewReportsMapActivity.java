@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;

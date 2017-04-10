@@ -1,6 +1,6 @@
 package com.example.m4;
 
-import com.example.m4.Controllers.EditProfileActivity;
+import com.example.m4.controllers.EditProfileActivity;
 import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
