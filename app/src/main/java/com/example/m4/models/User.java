@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by RSLi on 2/12/17.
- */
 
 public class User implements AccountType
 {
@@ -15,7 +12,7 @@ public class User implements AccountType
     private HashMap profileData;
 
     // add permissions for users
-    private List<Permission> permissions = Arrays.asList(
+    private final List<Permission> permissions = Arrays.asList(
             Permission.ACCESS_SOURCE_REPORT,
             Permission.ACCESS_AVAILABILITY_REPORT
     );
@@ -24,6 +21,7 @@ public class User implements AccountType
         this("dummy_username", "dummy_password");
     }
 
+    @SuppressWarnings({"WeakerAccess", "SameParameterValue"})
     public User(String username, String password) {
         this.username = username;
         this.password = password;
@@ -54,9 +52,9 @@ public class User implements AccountType
         this.password = password;
     }
 
-    public boolean isValidPassword(String input) {
-        return password.equals(input);
-    }
+//    public boolean isValidPassword(String input) {
+//        return password.equals(input);
+//    }
 
     public HashMap getProfileData() {
         return profileData;

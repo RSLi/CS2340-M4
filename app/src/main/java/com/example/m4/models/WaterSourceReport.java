@@ -43,12 +43,7 @@ public class WaterSourceReport extends Report
     @Override
     public boolean isValid()
     {
-        if (waterCondition != null && waterType != null) { return true;}
-        return false;
+        return waterCondition != null && waterType != null;
     }
 
-    @Override
-    public String getType() {
-        return "Water Source Report";
-    }
 }

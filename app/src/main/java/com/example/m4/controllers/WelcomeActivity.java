@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -33,12 +33,12 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     //methods for intent
-    public void goToLogin() {
+    private void goToLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
-    public void goToRegister() {
+    private void goToRegister() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }

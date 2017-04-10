@@ -11,7 +11,7 @@ public enum WaterCondition
     TreatableMuddy("Treatable-Muddy"),
     Potable("Potable");
 
-    private String string;
+    private final String string;
 
     WaterCondition(String str) {
         this.string = str;

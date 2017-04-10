@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,17 +16,6 @@ import com.example.m4.models.WaterSourceReport;
 import java.util.ArrayList;
 
 public class ViewOneReport extends AppCompatActivity {
-    TextView mReportNumber;
-    TextView mReporter;
-    TextView mDate;
-    TextView mLocation;
-    TextView mTV1;
-    TextView mTV2;
-    TextView mTV3;
-    TextView mTV4;
-    TextView mTV5;
-    TextView mTV6;
-    ArrayList<Report> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +27,19 @@ public class ViewOneReport extends AppCompatActivity {
         int intValue = mIntent.getIntExtra("reportNo", 0);
         //get report from reportList
         //noinspection unchecked
-        list = Models.getReportsAsList();
+        ArrayList<Report> list = Models.getReportsAsList();
 
         //get buttons and textviews
-        mReportNumber = (TextView) findViewById(R.id.reportNum);
-        mReporter = (TextView) findViewById(R.id.reporter);
-        mDate = (TextView) findViewById(R.id.date);
-        mLocation = (TextView) findViewById((R.id.location));
-        mTV1 = (TextView) findViewById(R.id.textView100);
-        mTV2 = (TextView) findViewById(R.id.textView101);
-        mTV3 = (TextView) findViewById(R.id.textView102);
-        mTV4 = (TextView) findViewById((R.id.textView103));
-        mTV5 = (TextView) findViewById((R.id.textView104));
-        mTV6 = (TextView) findViewById((R.id.textView105));
+        TextView mReportNumber = (TextView) findViewById(R.id.reportNum);
+        TextView mReporter = (TextView) findViewById(R.id.reporter);
+        TextView mDate = (TextView) findViewById(R.id.date);
+        TextView mLocation = (TextView) findViewById((R.id.location));
+        TextView mTV1 = (TextView) findViewById(R.id.textView100);
+        TextView mTV2 = (TextView) findViewById(R.id.textView101);
+        TextView mTV3 = (TextView) findViewById(R.id.textView102);
+        TextView mTV4 = (TextView) findViewById((R.id.textView103));
+        TextView mTV5 = (TextView) findViewById((R.id.textView104));
+        TextView mTV6 = (TextView) findViewById((R.id.textView105));
 
         //set textView to detailed report info
         mReportNumber.setText(""+ list.get(intValue).getReportNumber());
@@ -61,9 +50,9 @@ public class ViewOneReport extends AppCompatActivity {
         //display relevant info according to the report type
         if (list.get(intValue) instanceof WaterSourceReport){
             mTV1.setText("Water Condition:");
-            mTV2.setText("" + ((WaterSourceReport)list.get(intValue)).getWaterCondition());
+            mTV2.setText("" + ((WaterSourceReport) list.get(intValue)).getWaterCondition());
             mTV3.setText("Water Type:");
-            mTV4.setText("" + ((WaterSourceReport)list.get(intValue)).getWaterType());
+            mTV4.setText("" + ((WaterSourceReport) list.get(intValue)).getWaterType());
             mTV5.setText("");
             mTV6.setText("");
         } else if (list.get(intValue) instanceof WaterPurityReport){

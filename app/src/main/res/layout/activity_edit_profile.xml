@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.m4.Controllers.EditProfileActivity">
+    tools:context="com.example.m4.controllers.EditProfileActivity">
 
     <EditText
         android:id="@+id/field_profile_email"
@@ -27,12 +27,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_save_profile"
+        android:layout_marginLeft="16dp"
         android:layout_alignBaseline="@+id/btn_cancel_edit"
         android:layout_alignBottom="@+id/btn_cancel_edit"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp" />
+        android:layout_toEndOf="@+id/btn_cancel_edit" />
 
     <EditText
         android:id="@+id/field_profile_title"
@@ -51,11 +49,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_cancel_edit"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginRight="53dp"
-        android:layout_marginEnd="53dp" />
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView25" />
 
     <EditText
         android:id="@+id/field_profile_address"

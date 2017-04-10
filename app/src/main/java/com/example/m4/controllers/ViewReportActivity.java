@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,6 @@ import com.example.m4.models.DataBaseRequests;
 import com.example.m4.models.Models;
 import com.example.m4.models.Permission;
 
-/**
- * Created by yuchen on 2017/3/14.
- */
 
 public class ViewReportActivity extends AppCompatActivity{
     @Override

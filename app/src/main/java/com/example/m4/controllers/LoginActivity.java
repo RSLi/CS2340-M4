@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity
         });
     }
 
-    public void cancelLogin() {
+    private void cancelLogin() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }

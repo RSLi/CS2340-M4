@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import com.example.m4.models.WaterPurityReport;
 import java.util.Date;
 
 public class CreateWaterPurityReportActivity extends AppCompatActivity {
-    final WaterPurityReport report = new WaterPurityReport();
+    private final WaterPurityReport report = new WaterPurityReport();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
 
         //set up spinner to show the water over conditions
         final Spinner spWaterOverallCondition = (Spinner)findViewById(R.id.spinner_water_overall_condition);
-        spWaterOverallCondition.setAdapter(new ArrayAdapter<WaterOverallCondition>(this, android.R.layout.simple_spinner_item, WaterOverallCondition.values()));
+        spWaterOverallCondition.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterOverallCondition.values()));
 
         //display reporter name, report number, and dateTime on screen by autogenerating
         final TextView reporter = (TextView) findViewById((R.id.field_purity_reporter));

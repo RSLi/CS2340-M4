@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.m4.models.WaterType;
 import java.util.Date;
 
 public class CreateWaterSourceReportActivity extends AppCompatActivity {
-    final WaterSourceReport report = new WaterSourceReport();
+    private final WaterSourceReport report = new WaterSourceReport();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +33,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         //set up waterType and waterCondition spinners
         final Spinner spWaterType = (Spinner) findViewById(R.id.spinner_water_type);
         final Spinner spWaterCondition = (Spinner) findViewById(R.id.spinner_condition);
-        spWaterType.setAdapter(new ArrayAdapter<WaterType>(this, android.R.layout.simple_spinner_item, WaterType.values()));
-        spWaterCondition.setAdapter(new ArrayAdapter<WaterCondition>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
+        spWaterType.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterType.values()));
+        spWaterCondition.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
         //get info user typed in
         final EditText longitude = (EditText) findViewById(R.id.edit_longitude);
         final EditText latitude = (EditText) findViewById(R.id.edit_latitude);

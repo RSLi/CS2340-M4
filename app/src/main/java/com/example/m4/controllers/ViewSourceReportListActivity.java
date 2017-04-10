@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +31,7 @@ public class ViewSourceReportListActivity extends AppCompatActivity {
         // final ArrayList<Report> profileData = Models.getReportsAsList().stream().filter(report -> report instanceof WaterSourceReport).collect(Collectors.toList());
         //noinspection unchecked
         ArrayList<Report> allReportList = Models.getReportsAsList();
-        final ArrayList<WaterSourceReport> profileData = new ArrayList<WaterSourceReport>();
+        final ArrayList<WaterSourceReport> profileData = new ArrayList<>();
         for (Report report : allReportList) {
             if (report instanceof WaterSourceReport) {
                 profileData.add((WaterSourceReport) report);

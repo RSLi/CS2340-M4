@@ -1,5 +1,6 @@
 package com.example.m4.models;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.LruCache;
@@ -9,14 +10,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by theresaming on 4/4/17.
- */
-
 public class MySingleton {
+    @SuppressLint("StaticFieldLeak")
     private static MySingleton mInstance;
     private RequestQueue mRequestQueue;
+    @SuppressWarnings({"CanBeFinal", "unused", "FieldCanBeLocal"})
     private ImageLoader mImageLoader;
+    @SuppressLint("StaticFieldLeak")
     private static Context mCtx;
 
     private MySingleton(Context context) {
@@ -26,7 +26,7 @@ public class MySingleton {
         mImageLoader = new ImageLoader(mRequestQueue,
                 new ImageLoader.ImageCache() {
                     private final LruCache<String, Bitmap>
-                            cache = new LruCache<String, Bitmap>(20);
+                            cache = new LruCache<>(20);
 
                     @Override
                     public Bitmap getBitmap(String url) {
@@ -47,6 +47,7 @@ public class MySingleton {
         return mInstance;
     }
 
+    @SuppressWarnings("WeakerAccess")
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             // getApplicationContext() is key, it keeps you from leaking the
@@ -60,7 +61,7 @@ public class MySingleton {
         getRequestQueue().add(req);
     }
 
-    public ImageLoader getImageLoader() {
-        return mImageLoader;
-    }
+//    public ImageLoader getImageLoader() {
+//        return mImageLoader;
+//    }
 }

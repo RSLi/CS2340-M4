@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,6 @@ import com.example.m4.models.WaterPurityReport;
 
 import java.util.ArrayList;
 
-/**
- * Created by yuchen on 2017/4/1.
- */
 
 public class HistoricalReportFilter extends AppCompatActivity{
     @Override
@@ -28,6 +25,7 @@ public class HistoricalReportFilter extends AppCompatActivity{
 
         //get all reports
         @SuppressWarnings("unchecked") ArrayList<Report> allReportsList = Models.getReportsAsList();
+        //noinspection MismatchedQueryAndUpdateOfCollection
         final ArrayList<WaterPurityReport> purityReportList = new ArrayList<>();
 
         //These two locations and years Arraylists are used to display spinner choices to managers for history report filter.
@@ -50,11 +48,11 @@ public class HistoricalReportFilter extends AppCompatActivity{
         //add choices to spinners
         final Spinner locationSpinner = (Spinner) findViewById(R.id.spinner_Location);
         final Spinner yearSpinner = (Spinner) findViewById(R.id.spinner_year);
-        ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<String> locationAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, locations);
         locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationSpinner.setAdapter(locationAdapter);
-        ArrayAdapter<Integer> yearAdapter = new ArrayAdapter<Integer>(this,
+        ArrayAdapter<Integer> yearAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, years);
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);

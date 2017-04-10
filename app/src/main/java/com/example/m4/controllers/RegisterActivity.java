@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -30,25 +30,23 @@ import com.example.m4.models.Worker;
  */
 public class RegisterActivity extends AppCompatActivity {
 
-    /**
-     * Id to identity READ_CONTACTS permission request.
-     */
-    private static final int REQUEST_READ_CONTACTS = 0;
-
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo:hello", "bar:world"
-    };
+//    /**
+//     * Id to identity READ_CONTACTS permission request.
+//     */
+//    //private static final int REQUEST_READ_CONTACTS = 0;
+//
+//    /**
+//     * A dummy authentication store containing known user names and passwords.
+//     * TODO: remove after connecting to a real authentication system.
+//     */
+//    private static final String[] DUMMY_CREDENTIALS = new String[]{
+//            "foo:hello", "bar:world"
+//    };
 
 
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
     private Spinner mAccountTypeSpinner;
 
     @Override
@@ -85,8 +83,8 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+//        View mLoginFormView = findViewById(R.id.login_form);
+//        View mProgressView = findViewById(R.id.login_progress);
 
         //button for cancelling registration
         Button btnGotoWelcome = (Button)findViewById(R.id.btn_goToWelcome);
@@ -105,16 +103,22 @@ public class RegisterActivity extends AppCompatActivity {
         String username = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
         String accountType = mAccountTypeSpinner.getSelectedItem().toString();
+        //noinspection UnusedAssignment
         AccountType newAccount = new User();
 
-        if (accountType.equals("Administrator")) {
-            newAccount = new Administrator();
-        } else if (accountType.equals("Worker")) {
-            newAccount = new Worker();
-        } else if (accountType.equals("Manager")) {
-            newAccount = new Manager();
-        } else {
-            newAccount = new User();
+        switch (accountType) {
+            case "Administrator":
+                newAccount = new Administrator();
+                break;
+            case "Worker":
+                newAccount = new Worker();
+                break;
+            case "Manager":
+                newAccount = new Manager();
+                break;
+            default:
+                newAccount = new User();
+                break;
         }
 
         newAccount.setUsername(username);
@@ -135,7 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     //method for going to the welcome page
-    public void gotoWelcome() {
+    private void gotoWelcome() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }

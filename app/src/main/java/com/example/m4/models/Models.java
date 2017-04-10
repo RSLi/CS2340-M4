@@ -8,14 +8,9 @@ import java.util.HashMap;
 
 public class Models
 {
-    public static HashMap<String, AccountType> localAccounts = new HashMap<String, AccountType>();
+    private static final HashMap<String, AccountType> localAccounts = new HashMap<>();
     public static AccountType accountInSession;
-    public static ArrayList<Report> localReportList = new ArrayList<Report>();
-    public static ArrayList<Report> fullReport = new ArrayList<Report>();
-
-    public static HashMap getLocalAccounts() {
-        return localAccounts;
-    }
+    private static final ArrayList<Report> localReportList = new ArrayList<>();
 
     public static AccountType getAccountInSession() {
         return accountInSession;
@@ -26,6 +21,7 @@ public class Models
      * @param newAccount new AccountType to be registered
      * @return true if registration is successful
      */
+    @SuppressWarnings("SameReturnValue")
     public static boolean register(AccountType newAccount) {
         localAccounts.put(newAccount.getUsername(),newAccount);
         return true;
@@ -52,11 +48,10 @@ public class Models
 
     /**
      * Clear session variable and log user out
-     * @return true if logout successful
+     *
      */
-    public static boolean logout() {
+    public static void logout() {
         accountInSession = null;
-        return true;
     }
 
     public static ArrayList getReportsAsList() {

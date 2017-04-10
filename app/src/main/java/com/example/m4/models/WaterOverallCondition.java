@@ -6,7 +6,7 @@ public enum WaterOverallCondition
     Treatable("Treatable"),
     Unsafe("Unsafe");
 
-    private String string;
+    private final String string;
 
     WaterOverallCondition(String str) {
         this.string = str;

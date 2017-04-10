@@ -1,4 +1,4 @@
-package com.example.m4.Controllers;
+package com.example.m4.controllers;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,9 +16,6 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 
-/**
- * Created by yuchen on 2017/4/1.
- */
 
 public class ViewHistoricalReportActivity extends AppCompatActivity{
     @Override
@@ -56,8 +53,8 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         contamList[0] = new DataPoint(0,0);
         DataPoint vdp;
         DataPoint cdp;
-        double virusTotal = 0;
-        double contamTotal = 0;
+        double virusTotal;
+        double contamTotal;
 
         //Add datapoints to the graph.
         //The system will display an XY graph where the X axis is the month and the Y axis is the PPM.
