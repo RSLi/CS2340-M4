@@ -47,11 +47,11 @@ public class HistoricalReportFilter extends AppCompatActivity{
         //add choices to spinners
         final Spinner locationSpinner = (Spinner) findViewById(R.id.spinner_Location);
         final Spinner yearSpinner = (Spinner) findViewById(R.id.spinner_year);
-        ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<String> locationAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, locations);
         locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationSpinner.setAdapter(locationAdapter);
-        ArrayAdapter<Integer> yearAdapter = new ArrayAdapter<Integer>(this,
+        ArrayAdapter<Integer> yearAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, years);
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);

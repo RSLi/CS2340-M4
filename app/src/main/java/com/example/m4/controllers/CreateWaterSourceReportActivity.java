@@ -33,8 +33,8 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         //set up waterType and waterCondition spinners
         final Spinner spWaterType = (Spinner) findViewById(R.id.spinner_water_type);
         final Spinner spWaterCondition = (Spinner) findViewById(R.id.spinner_condition);
-        spWaterType.setAdapter(new ArrayAdapter<WaterType>(this, android.R.layout.simple_spinner_item, WaterType.values()));
-        spWaterCondition.setAdapter(new ArrayAdapter<WaterCondition>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
+        spWaterType.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterType.values()));
+        spWaterCondition.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterCondition.values()));
         //get info user typed in
         final EditText longitude = (EditText) findViewById(R.id.edit_longitude);
         final EditText latitude = (EditText) findViewById(R.id.edit_latitude);

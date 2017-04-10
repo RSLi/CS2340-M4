@@ -105,14 +105,19 @@ public class RegisterActivity extends AppCompatActivity {
         String accountType = mAccountTypeSpinner.getSelectedItem().toString();
         AccountType newAccount = new User();
 
-        if (accountType.equals("Administrator")) {
-            newAccount = new Administrator();
-        } else if (accountType.equals("Worker")) {
-            newAccount = new Worker();
-        } else if (accountType.equals("Manager")) {
-            newAccount = new Manager();
-        } else {
-            newAccount = new User();
+        switch (accountType) {
+            case "Administrator":
+                newAccount = new Administrator();
+                break;
+            case "Worker":
+                newAccount = new Worker();
+                break;
+            case "Manager":
+                newAccount = new Manager();
+                break;
+            default:
+                newAccount = new User();
+                break;
         }
 
         newAccount.setUsername(username);

@@ -30,7 +30,7 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
 
         //set up spinner to show the water over conditions
         final Spinner spWaterOverallCondition = (Spinner)findViewById(R.id.spinner_water_overall_condition);
-        spWaterOverallCondition.setAdapter(new ArrayAdapter<WaterOverallCondition>(this, android.R.layout.simple_spinner_item, WaterOverallCondition.values()));
+        spWaterOverallCondition.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterOverallCondition.values()));
 
         //display reporter name, report number, and dateTime on screen by autogenerating
         final TextView reporter = (TextView) findViewById((R.id.field_purity_reporter));

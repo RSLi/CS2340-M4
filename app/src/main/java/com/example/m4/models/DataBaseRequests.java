@@ -51,14 +51,19 @@ public class DataBaseRequests {
 
                                 AccountType newAccount;
 
-                                if (accountType.equals("Administrator")) {
-                                    newAccount = new Administrator();
-                                } else if (accountType.equals("Worker")) {
-                                    newAccount = new Worker();
-                                } else if (accountType.equals("Manager")) {
-                                    newAccount = new Manager();
-                                } else {
-                                    newAccount = new User();
+                                switch (accountType) {
+                                    case "Administrator":
+                                        newAccount = new Administrator();
+                                        break;
+                                    case "Worker":
+                                        newAccount = new Worker();
+                                        break;
+                                    case "Manager":
+                                        newAccount = new Manager();
+                                        break;
+                                    default:
+                                        newAccount = new User();
+                                        break;
                                 }
 
                                 System.out.println("Username: " + username);
@@ -118,7 +123,7 @@ public class DataBaseRequests {
                     public void onResponse(String response) {
                         Toast out = Toast.makeText(context, "User Successfully Added", Toast.LENGTH_SHORT);
                         out.show();
-                        System.out.println(response.toString());
+                        System.out.println(response);
                     }
                 }, new Response.ErrorListener() {
 
@@ -214,46 +219,51 @@ public class DataBaseRequests {
                                 System.out.println(reportNumber);
                                 
                                 boolean addReport;
-                                if (reportType.equals("Water Purity Report")) {
-                                    WaterPurityReport newReport = new WaterPurityReport();
-                                    newReport.setWaterOverallCondition(WaterOverallCondition.valueOf(waterCondition));
-                                    newReport.setVirusPPM(virusPPM);
-                                    newReport.setContaminantPPM(contaminantPPM);
-                                    newReport.setReporterUsername(reporterUser);
-                                    newReport.setReportNumber(reportNumber);
-                                    newReport.setDate(sdf.parse(dateString));
-                                    newReport.setYear(year);
-                                    newReport.setMonth(month);
-                                    newReport.setLocation(location);
-                                    newReport.setLatitude(latitude);
-                                    newReport.setLongitude(longitude);
+                                switch (reportType) {
+                                    case "Water Purity Report": {
+                                        WaterPurityReport newReport = new WaterPurityReport();
+                                        newReport.setWaterOverallCondition(WaterOverallCondition.valueOf(waterCondition));
+                                        newReport.setVirusPPM(virusPPM);
+                                        newReport.setContaminantPPM(contaminantPPM);
+                                        newReport.setReporterUsername(reporterUser);
+                                        newReport.setReportNumber(reportNumber);
+                                        newReport.setDate(sdf.parse(dateString));
+                                        newReport.setYear(year);
+                                        newReport.setMonth(month);
+                                        newReport.setLocation(location);
+                                        newReport.setLatitude(latitude);
+                                        newReport.setLongitude(longitude);
 
-                                    addReport = Models.submitReport(newReport);
-                                    System.out.println(addReport);
-
-
-                                } else if (reportType.equals("Water Source Report")) {
-                                    WaterSourceReport newReport = new WaterSourceReport();
-                                    newReport.setWaterCondition(WaterCondition.valueOf(waterCondition));
-                                    newReport.setWaterType(WaterType.valueOf(waterType));
-                                    newReport.setReporterUsername(reporterUser);
-                                    newReport.setReportNumber(reportNumber);
-                                    newReport.setDate(sdf.parse(dateString));
-                                    newReport.setYear(year);
-                                    newReport.setMonth(month);
-                                    newReport.setLocation(location);
-                                    newReport.setLatitude(latitude);
-                                    newReport.setLongitude(longitude);
-
-                                    addReport = Models.submitReport(newReport);
-                                    System.out.println(addReport);
+                                        addReport = Models.submitReport(newReport);
+                                        System.out.println(addReport);
 
 
+                                        break;
+                                    }
+                                    case "Water Source Report": {
+                                        WaterSourceReport newReport = new WaterSourceReport();
+                                        newReport.setWaterCondition(WaterCondition.valueOf(waterCondition));
+                                        newReport.setWaterType(WaterType.valueOf(waterType));
+                                        newReport.setReporterUsername(reporterUser);
+                                        newReport.setReportNumber(reportNumber);
+                                        newReport.setDate(sdf.parse(dateString));
+                                        newReport.setYear(year);
+                                        newReport.setMonth(month);
+                                        newReport.setLocation(location);
+                                        newReport.setLatitude(latitude);
+                                        newReport.setLongitude(longitude);
 
-                                } else {
-                                    System.out.println("No valid report");
-                                    System.out.println(false);
+                                        addReport = Models.submitReport(newReport);
+                                        System.out.println(addReport);
 
+
+                                        break;
+                                    }
+                                    default:
+                                        System.out.println("No valid report");
+                                        System.out.println(false);
+
+                                        break;
                                 }
 
                             }
@@ -287,7 +297,7 @@ public class DataBaseRequests {
                     public void onResponse(String response) {
                         Toast out = Toast.makeText(context, "Report Successfully Added", Toast.LENGTH_SHORT);
                         out.show();
-                        System.out.println(response.toString());
+                        System.out.println(response);
                     }
                 }, new Response.ErrorListener() {
 
