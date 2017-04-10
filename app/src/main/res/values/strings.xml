@@ -28,6 +28,7 @@
 
     <string name="create_water_purity_report_title_1">Create Water</string>
     <string name="create_water_purity_report_title_2">Purity Report</string>
+    <string name="create_watter_source_report_title_2">Source Report</string>
 
     <string name="all_report_no">Report No. :</string>
     <string name="all_reporter">Reporter:</string>
@@ -40,6 +41,7 @@
     <string name="all_longitude">Longitude</string>
     <string name="all_submit">Submit</string>
     <string name="create_water_purity_report_virus_ppm">Virus PPM:</string>
+    <string name="create_water_source_report_water_type">Water Type:</string>
 
 
 </resources>
