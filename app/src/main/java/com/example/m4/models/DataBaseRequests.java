@@ -21,6 +21,7 @@ import java.util.Locale;
 import java.util.Map;
 
 
+@SuppressWarnings("ConstantConditions")
 public class DataBaseRequests {
 
     //public static String url = "http://nstoltzfus3.pythonanywhere.com/";
@@ -72,9 +73,14 @@ public class DataBaseRequests {
 
                                 newAccount.setUsername(username);
                                 newAccount.setPassword(password);
+                                HashMap<String, String> profile = new HashMap<>();
+                                profile.put("address", address);
+                                profile.put("title", title);
+                                profile.put("email", email);
+                                newAccount.setProfileData(profile);
 
 
-                                boolean registerSuccess = Models.register(newAccount);
+                                //boolean registerSuccess = Models.register(newAccount);
 
                             }
 

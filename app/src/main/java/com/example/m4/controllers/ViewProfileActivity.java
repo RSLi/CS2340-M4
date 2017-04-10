@@ -24,7 +24,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         TextView mFieldProfileEmail = (TextView) findViewById(R.id.field_profile_email);
         TextView mFieldProfileAddress = (TextView) findViewById(R.id.field_profile_address);
         TextView mFieldProfileTitle = (TextView) findViewById(R.id.field_profile_title);
-        Button mBtnEditProfile = (Button) findViewById((R.id.btn_goto_Edit));
+        //Button mBtnEditProfile = (Button) findViewById((R.id.btn_goto_Edit));
 
         //set button
         Button btnGotoProfile = (Button) findViewById(R.id.btn_goto_Edit);

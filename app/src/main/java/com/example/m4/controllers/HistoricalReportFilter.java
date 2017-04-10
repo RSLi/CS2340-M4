@@ -25,6 +25,7 @@ public class HistoricalReportFilter extends AppCompatActivity{
 
         //get all reports
         @SuppressWarnings("unchecked") ArrayList<Report> allReportsList = Models.getReportsAsList();
+        //noinspection MismatchedQueryAndUpdateOfCollection
         final ArrayList<WaterPurityReport> purityReportList = new ArrayList<>();
 
         //These two locations and years Arraylists are used to display spinner choices to managers for history report filter.

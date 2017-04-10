@@ -91,7 +91,7 @@ public class EditProfileActivity extends AppCompatActivity
 
     //Check the validation of user entered emails in profile
     public static boolean isValidEmail(String email) {
-        if (email == null || email == "") {
+        if (email == null || email.equals("")) {
             throw new IllegalArgumentException();
         } else {
             return EMAIL.matcher(email).matches();

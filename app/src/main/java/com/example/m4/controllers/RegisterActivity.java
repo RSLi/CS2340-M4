@@ -83,8 +83,8 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        View mLoginFormView = findViewById(R.id.login_form);
-        View mProgressView = findViewById(R.id.login_progress);
+//        View mLoginFormView = findViewById(R.id.login_form);
+//        View mProgressView = findViewById(R.id.login_progress);
 
         //button for cancelling registration
         Button btnGotoWelcome = (Button)findViewById(R.id.btn_goToWelcome);
@@ -103,6 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
         String username = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
         String accountType = mAccountTypeSpinner.getSelectedItem().toString();
+        //noinspection UnusedAssignment
         AccountType newAccount = new User();
 
         switch (accountType) {

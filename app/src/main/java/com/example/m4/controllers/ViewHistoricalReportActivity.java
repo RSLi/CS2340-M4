@@ -53,8 +53,8 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         contamList[0] = new DataPoint(0,0);
         DataPoint vdp;
         DataPoint cdp;
-        double virusTotal = 0;
-        double contamTotal = 0;
+        double virusTotal;
+        double contamTotal;
 
         //Add datapoints to the graph.
         //The system will display an XY graph where the X axis is the month and the Y axis is the PPM.
