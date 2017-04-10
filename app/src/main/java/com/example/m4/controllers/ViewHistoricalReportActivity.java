@@ -16,9 +16,6 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 
-/**
- * Created by yuchen on 2017/4/1.
- */
 
 public class ViewHistoricalReportActivity extends AppCompatActivity{
     @Override

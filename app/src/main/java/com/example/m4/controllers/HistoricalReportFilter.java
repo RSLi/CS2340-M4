@@ -15,9 +15,6 @@ import com.example.m4.models.WaterPurityReport;
 
 import java.util.ArrayList;
 
-/**
- * Created by yuchen on 2017/4/1.
- */
 
 public class HistoricalReportFilter extends AppCompatActivity{
     @Override

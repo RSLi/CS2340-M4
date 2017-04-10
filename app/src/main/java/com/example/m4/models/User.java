@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by RSLi on 2/12/17.
- */
 
 public class User implements AccountType
 {

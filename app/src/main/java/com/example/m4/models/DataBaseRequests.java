@@ -20,9 +20,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-/**
- * Created by nickstoltz on 4/4/17.
- */
 
 public class DataBaseRequests {
 

@@ -1,5 +1,6 @@
 package com.example.m4.models;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.LruCache;
@@ -9,14 +10,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by theresaming on 4/4/17.
- */
-
 public class MySingleton {
+    @SuppressLint("StaticFieldLeak")
     private static MySingleton mInstance;
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
+    @SuppressLint("StaticFieldLeak")
     private static Context mCtx;
 
     private MySingleton(Context context) {

@@ -46,15 +46,14 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
     @SuppressWarnings("unchecked")
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        GoogleMap mMap = googleMap;
         mReports = Models.getReportsAsList();
         //display markers for all water source reports
         for (Report r : mReports) {
             if (r instanceof WaterSourceReport) {
                 LatLng location = new LatLng((r.getLongitude()), r.getLatitude());
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(location));
                 //when the maker is clicked, show the water type and water condition of the water source
-                mMap.addMarker(new MarkerOptions().position(location).title("" + ((WaterSourceReport) r).getWaterType() + ", " + ((WaterSourceReport) r).getWaterCondition()));
+                googleMap.addMarker(new MarkerOptions().position(location).title("" + ((WaterSourceReport) r).getWaterType() + ", " + ((WaterSourceReport) r).getWaterCondition()));
             }
         }
     }
