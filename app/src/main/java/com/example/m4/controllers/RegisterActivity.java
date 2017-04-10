@@ -47,8 +47,6 @@ public class RegisterActivity extends AppCompatActivity {
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
     private Spinner mAccountTypeSpinner;
 
     @Override
@@ -85,8 +83,8 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+        View mLoginFormView = findViewById(R.id.login_form);
+        View mProgressView = findViewById(R.id.login_progress);
 
         //button for cancelling registration
         Button btnGotoWelcome = (Button)findViewById(R.id.btn_goToWelcome);

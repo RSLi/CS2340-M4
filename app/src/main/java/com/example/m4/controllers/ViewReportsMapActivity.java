@@ -18,7 +18,6 @@ import java.util.List;
 
 public class ViewReportsMapActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
     //SupportMapFragment fragMap;
     private static List<Report> mReports;
 
@@ -47,7 +46,7 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
     @SuppressWarnings("unchecked")
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        GoogleMap mMap = googleMap;
         mReports = Models.getReportsAsList();
         //display markers for all water source reports
         for (Report r : mReports) {
