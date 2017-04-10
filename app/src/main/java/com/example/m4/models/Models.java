@@ -11,11 +11,6 @@ public class Models
     private static final HashMap<String, AccountType> localAccounts = new HashMap<>();
     public static AccountType accountInSession;
     private static final ArrayList<Report> localReportList = new ArrayList<>();
-    public static ArrayList<Report> fullReport = new ArrayList<>();
-
-    public static HashMap getLocalAccounts() {
-        return localAccounts;
-    }
 
     public static AccountType getAccountInSession() {
         return accountInSession;
@@ -26,6 +21,7 @@ public class Models
      * @param newAccount new AccountType to be registered
      * @return true if registration is successful
      */
+    @SuppressWarnings("SameReturnValue")
     public static boolean register(AccountType newAccount) {
         localAccounts.put(newAccount.getUsername(),newAccount);
         return true;
@@ -52,7 +48,7 @@ public class Models
 
     /**
      * Clear session variable and log user out
-     * @return true if logout successful
+     *
      */
     public static void logout() {
         accountInSession = null;

@@ -15,10 +15,12 @@ public class Report {
     private double latitude;
     private double longitude;
 
-    public Report() {
+    @SuppressWarnings("unused")
+    Report() {
         //default constructor
     }
 
+    @SuppressWarnings("unused")
     public Report(String reporterUsername, int reportNumber, Date date, int year, int month,
                   String location, double latitude, double longitude) {
         this.reporterUsername = reporterUsername;
@@ -28,6 +30,7 @@ public class Report {
         this.location = location;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.year = year;
     }
 
     public String getReporterUsername() {
@@ -60,6 +63,7 @@ public class Report {
 
     public void setMonth(int month) {this.month = month;}
 
+    @SuppressWarnings("unused")
     public String getLocation() {
         return location;
     }
@@ -88,9 +92,6 @@ public class Report {
         this.longitude = longitude;
     }
 
-    public String getType() {
-        return "Report";
-    }
 
     /**
      * Check if the data in the report is valid

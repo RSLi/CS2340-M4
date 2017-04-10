@@ -62,8 +62,4 @@ public class WaterPurityReport extends Report
         return waterOverallCondition != null && virusPPM != null && contaminantPPM != null;
     }
 
-    @Override
-    public String getType() {
-        return "Water Purity Report";
-    }
 }

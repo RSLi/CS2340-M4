@@ -14,6 +14,7 @@ public class MySingleton {
     @SuppressLint("StaticFieldLeak")
     private static MySingleton mInstance;
     private RequestQueue mRequestQueue;
+    @SuppressWarnings({"CanBeFinal", "unused", "FieldCanBeLocal"})
     private ImageLoader mImageLoader;
     @SuppressLint("StaticFieldLeak")
     private static Context mCtx;
@@ -46,6 +47,7 @@ public class MySingleton {
         return mInstance;
     }
 
+    @SuppressWarnings("WeakerAccess")
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             // getApplicationContext() is key, it keeps you from leaking the
@@ -59,7 +61,7 @@ public class MySingleton {
         getRequestQueue().add(req);
     }
 
-    public ImageLoader getImageLoader() {
-        return mImageLoader;
-    }
+//    public ImageLoader getImageLoader() {
+//        return mImageLoader;
+//    }
 }

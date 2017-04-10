@@ -13,10 +13,6 @@ import com.example.m4.models.Models;
 import java.util.HashMap;
 
 public class ViewProfileActivity extends AppCompatActivity {
-    private TextView mFieldProfileEmail;
-    private TextView mFieldProfileAddress;
-    private TextView mFieldProfileTitle;
-    private Button mBtnEditProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,10 +21,10 @@ public class ViewProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_profile);
 
         //get buttons and textviews
-        mFieldProfileEmail = (TextView) findViewById(R.id.field_profile_email);
-        mFieldProfileAddress = (TextView) findViewById(R.id.field_profile_address);
-        mFieldProfileTitle = (TextView) findViewById(R.id.field_profile_title);
-        mBtnEditProfile = (Button) findViewById((R.id.btn_goto_Edit));
+        TextView mFieldProfileEmail = (TextView) findViewById(R.id.field_profile_email);
+        TextView mFieldProfileAddress = (TextView) findViewById(R.id.field_profile_address);
+        TextView mFieldProfileTitle = (TextView) findViewById(R.id.field_profile_title);
+        Button mBtnEditProfile = (Button) findViewById((R.id.btn_goto_Edit));
 
         //set button
         Button btnGotoProfile = (Button) findViewById(R.id.btn_goto_Edit);

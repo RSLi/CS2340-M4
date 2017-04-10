@@ -8,7 +8,7 @@ public enum WaterType
     Lake("Lake"),
     Spring("Spring"),
     Other("Other");
-    private String string;
+    private final String string;
 
     WaterType(String str) {
         this.string = str;

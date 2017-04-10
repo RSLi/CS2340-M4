@@ -30,18 +30,18 @@ import com.example.m4.models.Worker;
  */
 public class RegisterActivity extends AppCompatActivity {
 
-    /**
-     * Id to identity READ_CONTACTS permission request.
-     */
-    private static final int REQUEST_READ_CONTACTS = 0;
-
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo:hello", "bar:world"
-    };
+//    /**
+//     * Id to identity READ_CONTACTS permission request.
+//     */
+//    //private static final int REQUEST_READ_CONTACTS = 0;
+//
+//    /**
+//     * A dummy authentication store containing known user names and passwords.
+//     * TODO: remove after connecting to a real authentication system.
+//     */
+//    private static final String[] DUMMY_CREDENTIALS = new String[]{
+//            "foo:hello", "bar:world"
+//    };
 
 
     // UI references.
