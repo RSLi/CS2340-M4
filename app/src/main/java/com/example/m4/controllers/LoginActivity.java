@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity
         });
     }
 
-    public void cancelLogin() {
+    private void cancelLogin() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }

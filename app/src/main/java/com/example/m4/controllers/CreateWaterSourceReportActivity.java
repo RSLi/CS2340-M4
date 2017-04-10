@@ -20,7 +20,7 @@ import com.example.m4.models.WaterType;
 import java.util.Date;
 
 public class CreateWaterSourceReportActivity extends AppCompatActivity {
-    final WaterSourceReport report = new WaterSourceReport();
+    private final WaterSourceReport report = new WaterSourceReport();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -33,12 +33,12 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     //methods for intent
-    public void goToLogin() {
+    private void goToLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
-    public void goToRegister() {
+    private void goToRegister() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }

@@ -138,7 +138,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
     //method for going to the welcome page
-    public void gotoWelcome() {
+    private void gotoWelcome() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }

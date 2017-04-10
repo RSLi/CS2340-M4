@@ -13,10 +13,10 @@ import com.example.m4.models.Models;
 import java.util.HashMap;
 
 public class ViewProfileActivity extends AppCompatActivity {
-    TextView mFieldProfileEmail;
-    TextView mFieldProfileAddress;
-    TextView mFieldProfileTitle;
-    Button mBtnEditProfile;
+    private TextView mFieldProfileEmail;
+    private TextView mFieldProfileAddress;
+    private TextView mFieldProfileTitle;
+    private Button mBtnEditProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

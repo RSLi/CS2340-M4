@@ -16,10 +16,9 @@ import java.util.regex.Pattern;
 
 public class EditProfileActivity extends AppCompatActivity
 {
-    EditText mFieldProfileEmail;
-    EditText mFieldProfileAddress;
-    EditText mFieldProfileTitle;
-    Button mBtnSaveProfile;
+    private EditText mFieldProfileEmail;
+    private EditText mFieldProfileAddress;
+    private EditText mFieldProfileTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class EditProfileActivity extends AppCompatActivity
         mFieldProfileEmail = (EditText) findViewById(R.id.field_profile_email);
         mFieldProfileAddress = (EditText) findViewById(R.id.field_profile_address);
         mFieldProfileTitle = (EditText) findViewById(R.id.field_profile_title);
-        mBtnSaveProfile = (Button) findViewById((R.id.btn_save_profile));
+        Button mBtnSaveProfile = (Button) findViewById((R.id.btn_save_profile));
 
         //once submit is clicked, new info is added to the hashmap
         mBtnSaveProfile.setOnClickListener(new View.OnClickListener() {

@@ -19,7 +19,7 @@ import com.example.m4.models.WaterPurityReport;
 import java.util.Date;
 
 public class CreateWaterPurityReportActivity extends AppCompatActivity {
-    final WaterPurityReport report = new WaterPurityReport();
+    private final WaterPurityReport report = new WaterPurityReport();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
