@@ -11,7 +11,7 @@
     tools:context="com.example.m4.controllers.MainAppActivity">
 
     <TextView
-        android:text="Clean Water"
+        android:text="@string/main_app_title_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/view"
@@ -21,7 +21,7 @@
         android:layout_marginTop="29dp" />
 
     <TextView
-        android:text="CrowdSourcing"
+        android:text="@string/main_app_title_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView10"
@@ -33,7 +33,7 @@
         android:layout_below="@+id/view" />
 
     <Button
-        android:text="View Report"
+        android:text="@string/all_view_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_view_report"
@@ -42,7 +42,7 @@
         android:layout_alignStart="@+id/btn_user_profile" />
 
     <Button
-        android:text="User Profile"
+        android:text="@string/all_user_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_user_profile"
@@ -50,7 +50,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Logout"
+        android:text="@string/action_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_logout"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_create_report"
-        android:text="Create Report"
+        android:text="@string/all_create_report"
         android:layout_marginTop="49dp"
         android:layout_below="@+id/textView10"
         android:layout_centerHorizontal="true" />

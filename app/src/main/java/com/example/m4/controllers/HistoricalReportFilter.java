@@ -28,11 +28,11 @@ public class HistoricalReportFilter extends AppCompatActivity{
         //noinspection MismatchedQueryAndUpdateOfCollection
         final ArrayList<WaterPurityReport> purityReportList = new ArrayList<>();
 
-        //These two locations and years Arraylists are used to display spinner choices to managers for history report filter.
+        //These two locations and years ArrayLists are used to display spinner choices to managers for history report filter.
         final ArrayList<String> locations = new ArrayList<>();
         ArrayList<Integer> years = new ArrayList<>();
 
-        //for each report, if it is a waterpurityreport, add the year and location to Arraylists if they are not in it yet.
+        //for each report, if it is a water purity report, add the year and location to ArrayLists if they are not in it yet.
         for (Report r: allReportsList) {
             if (r instanceof WaterPurityReport) {
                 purityReportList.add((WaterPurityReport) r);

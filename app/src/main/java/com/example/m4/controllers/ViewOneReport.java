@@ -29,7 +29,7 @@ public class ViewOneReport extends AppCompatActivity {
         //noinspection unchecked
         ArrayList<Report> list = Models.getReportsAsList();
 
-        //get buttons and textviews
+        //get buttons and TextViews
         TextView mReportNumber = (TextView) findViewById(R.id.reportNum);
         TextView mReporter = (TextView) findViewById(R.id.reporter);
         TextView mDate = (TextView) findViewById(R.id.date);

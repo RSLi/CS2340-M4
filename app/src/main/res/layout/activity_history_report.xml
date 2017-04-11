@@ -16,7 +16,7 @@
         android:layout_below="@+id/graph"
         android:layout_marginEnd="82dp"
         android:layout_marginTop="21dp"
-        android:text="Red: Virus PPM"
+        android:text="@string/historical_report_red_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView29"
         android:layout_centerVertical="true"
-        android:text="Blue: Contaminant PPM"
+        android:text="@string/historical_report_blue_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 </RelativeLayout>

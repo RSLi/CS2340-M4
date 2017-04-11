@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/reporter"
@@ -16,7 +16,7 @@
         android:layout_alignStart="@+id/reportNum" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/location"
@@ -26,7 +26,7 @@
         android:layout_alignEnd="@+id/textView13" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/date"
@@ -36,7 +36,7 @@
         android:layout_alignStart="@+id/location" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView102"
@@ -45,7 +45,7 @@
         android:id="@+id/textView103" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/reportNum"
@@ -55,7 +55,7 @@
         android:layout_above="@+id/textView18" />
 
     <TextView
-        android:text="Reporter: "
+        android:text="@string/all_reporter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
@@ -65,7 +65,7 @@
         android:layout_alignStart="@+id/textView17" />
 
     <TextView
-        android:text="Report Date:"
+        android:text="@string/all_date_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -75,7 +75,7 @@
         android:layout_alignStart="@+id/textView18" />
 
     <TextView
-        android:text="Location:"
+        android:text="@string/historical_report_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -85,7 +85,7 @@
         android:layout_alignStart="@+id/textView19" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -95,7 +95,7 @@
         android:layout_alignStart="@+id/textView102" />
 
     <TextView
-        android:text="Report"
+        android:text="@string/all_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView13"
@@ -105,7 +105,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Report No: "
+        android:text="@string/all_report_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -115,7 +115,7 @@
         android:layout_toStartOf="@+id/textView13" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
@@ -125,7 +125,7 @@
         android:layout_alignEnd="@+id/textView17" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -135,7 +135,7 @@
         android:layout_alignStart="@+id/textView102" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView101"
@@ -145,7 +145,7 @@
         android:layout_alignStart="@+id/location" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView105"

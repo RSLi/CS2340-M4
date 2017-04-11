@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:text="Title"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/field_profile_title"
@@ -17,7 +17,7 @@
         android:layout_alignStart="@+id/field_profile_email" />
 
     <TextView
-        android:text="Email"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/field_profile_email"
@@ -28,7 +28,7 @@
         android:layout_alignStart="@+id/field_profile_address" />
 
     <Button
-        android:text="Edit"
+        android:text="@string/all_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
@@ -38,7 +38,7 @@
         android:layout_alignEnd="@+id/textView15" />
 
     <TextView
-        android:text="Title:"
+        android:text="@string/profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView16"
@@ -49,7 +49,7 @@
         android:layout_alignStart="@+id/textView14" />
 
     <TextView
-        android:text="Address:"
+        android:text="@string/profile_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView15"
@@ -60,7 +60,7 @@
         android:layout_alignStart="@+id/textView16" />
 
     <TextView
-        android:text="Address"
+        android:text="@string/all_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/field_profile_address"
@@ -70,7 +70,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Email:"
+        android:text="@string/profile_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView14"

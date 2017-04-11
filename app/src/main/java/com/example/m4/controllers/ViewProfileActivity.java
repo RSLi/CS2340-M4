@@ -20,7 +20,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
 
-        //get buttons and textviews
+        //get buttons and TextViews
         TextView mFieldProfileEmail = (TextView) findViewById(R.id.field_profile_email);
         TextView mFieldProfileAddress = (TextView) findViewById(R.id.field_profile_address);
         TextView mFieldProfileTitle = (TextView) findViewById(R.id.field_profile_title);

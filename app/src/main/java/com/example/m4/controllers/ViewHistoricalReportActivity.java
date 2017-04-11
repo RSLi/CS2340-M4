@@ -45,44 +45,44 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         //create a graph
         GraphView graph = (GraphView) findViewById(R.id.graph);
         //int size = historyReport.size();
-        //create datapoint lists
+        //create data point lists
         DataPoint[] virusList = new DataPoint[13];
-        DataPoint[] contamList = new DataPoint[13];
-        //add (0,0) to the datapoint lists for month 0(invalid)
+        DataPoint[] contaminantList = new DataPoint[13];
+        //add (0,0) to the data point lists for month 0(invalid)
         virusList[0] = new DataPoint(0,0);
-        contamList[0] = new DataPoint(0,0);
+        contaminantList[0] = new DataPoint(0,0);
         DataPoint vdp;
         DataPoint cdp;
         double virusTotal;
-        double contamTotal;
+        double contaminantTotal;
 
-        //Add datapoints to the graph.
+        //Add data points to the graph.
         //The system will display an XY graph where the X axis is the month and the Y axis is the PPM.
         // Each month's data point can be an average of the reports for that month if there are more than one.
         ArrayList<WaterPurityReport> d = new ArrayList<>();
         for (int i = 1; i < 13; i++) {
             virusTotal = 0;
-            contamTotal = 0;
+            contaminantTotal = 0;
             //count = 0;
             for (WaterPurityReport r: historyReport) {
                 if ((r.getMonth() + 1) == i ) {
                     virusTotal += r.getVirusPPM();
-                    contamTotal += r.getContaminantPPM();
+                    contaminantTotal += r.getContaminantPPM();
                     d.add(r);
                     //count += 1;
                 }
             }
             //if there are no reports in this month
-            if (virusTotal == 0 && contamTotal == 0) {
+            if (virusTotal == 0 && contaminantTotal == 0) {
                 virusList[i] = new DataPoint(i,0);
-                contamList[i] = new DataPoint(i,0);
+                contaminantList[i] = new DataPoint(i,0);
             } else {
                 double avgVirusPPM = virusTotal / d.size();
-                double avgContamPPM = contamTotal / d.size();
+                double avgContaminantPPM = contaminantTotal / d.size();
                 vdp = new DataPoint(((double) (i)), avgVirusPPM);
                 virusList[i] = vdp;
-                cdp = new DataPoint(((double) (i)), avgContamPPM);
-                contamList[i] = cdp;
+                cdp = new DataPoint(((double) (i)), avgContaminantPPM);
+                contaminantList[i] = cdp;
             }
         }
         //draw VirusPPM line and set up some attributes
@@ -101,7 +101,7 @@ public class ViewHistoricalReportActivity extends AppCompatActivity{
         gridLabel.setPadding(40); // should allow for 3 digits to fit on screen
 
         //draw ContaminantPPM line and set up some attributes
-        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(contamList);
+        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(contaminantList);
         series2.setTitle("Contaminant PPM");
         series2.setColor(Color.BLUE);
         series2.setDrawDataPoints(true);

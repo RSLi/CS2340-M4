@@ -31,7 +31,7 @@ public class EditProfileActivity extends AppCompatActivity
         mFieldProfileTitle = (EditText) findViewById(R.id.field_profile_title);
         Button mBtnSaveProfile = (Button) findViewById((R.id.btn_save_profile));
 
-        //once submit is clicked, new info is added to the hashmap
+        //once submit is clicked, new info is added to the hash map
         mBtnSaveProfile.setOnClickListener(new View.OnClickListener() {
             @SuppressWarnings("unchecked")
             @Override

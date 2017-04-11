@@ -17,6 +17,7 @@ import com.example.m4.models.WaterOverallCondition;
 import com.example.m4.models.WaterPurityReport;
 
 import java.util.Date;
+import java.util.Locale;
 
 public class CreateWaterPurityReportActivity extends AppCompatActivity {
     private final WaterPurityReport report = new WaterPurityReport();
@@ -32,12 +33,12 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
         final Spinner spWaterOverallCondition = (Spinner)findViewById(R.id.spinner_water_overall_condition);
         spWaterOverallCondition.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, WaterOverallCondition.values()));
 
-        //display reporter name, report number, and dateTime on screen by autogenerating
+        //display reporter name, report number, and dateTime on screen by auto-generation
         final TextView reporter = (TextView) findViewById((R.id.field_purity_reporter));
         TextView reportNo = (TextView) findViewById((R.id.field_purity_num));
         TextView dateTime = (TextView) findViewById((R.id.field_date_time));
         reporter.setText(Models.accountInSession.getUsername());
-        reportNo.setText(((Integer) Models.getReportsAsList().size()).toString());
+        reportNo.setText((String.format(Locale.US, "%d", Models.getReportsAsList().size())));
         Date date = new Date();
         dateTime.setText(date.toString());
 

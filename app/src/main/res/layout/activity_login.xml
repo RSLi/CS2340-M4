@@ -38,7 +38,7 @@
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
+                    android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     />
@@ -69,11 +69,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Sign In"
+                android:text="@string/action_sign_in_short"
                 android:textStyle="bold"/>
 
             <Button
-                android:text="Cancel"
+                android:text="@string/all_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_cancelLogin" />

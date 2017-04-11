@@ -10,7 +10,7 @@
         android:layout_below="@+id/spinner_year"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:text="Submit" />
+        android:text="@string/all_submit" />
 
     <TextView
         android:id="@+id/textView24"
@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginTop="85dp"
-        android:text="Location:"
+        android:text="@string/historical_report_location"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <Spinner
@@ -37,7 +37,7 @@
         android:layout_alignStart="@+id/textView24"
         android:layout_below="@+id/textView24"
         android:layout_marginTop="18dp"
-        android:text="Year:"
+        android:text="@string/historical_report_year"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <Spinner

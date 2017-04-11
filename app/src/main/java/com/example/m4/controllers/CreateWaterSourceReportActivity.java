@@ -18,6 +18,7 @@ import com.example.m4.models.WaterSourceReport;
 import com.example.m4.models.WaterType;
 
 import java.util.Date;
+import java.util.Locale;
 
 public class CreateWaterSourceReportActivity extends AppCompatActivity {
     private final WaterSourceReport report = new WaterSourceReport();
@@ -39,12 +40,12 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
         final EditText longitude = (EditText) findViewById(R.id.edit_longitude);
         final EditText latitude = (EditText) findViewById(R.id.edit_latitude);
 
-        //display reporter name, report number, and dateTime on screen by autogenerating
+        //display reporter name, report number, and dateTime on screen by auto-generation
         TextView reporter = (TextView) findViewById((R.id.field_source_reporter));
         TextView reportNo = (TextView) findViewById((R.id.field_source_num));
         TextView dateTime = (TextView) findViewById((R.id.field_date_time));
         reporter.setText(Models.accountInSession.getUsername());
-        reportNo.setText(((Integer) Models.getReportsAsList().size()).toString());
+        reportNo.setText((String.format(Locale.US, "%d", Models.getReportsAsList().size())));
         Date date = new Date();
         dateTime.setText(date.toString());
 

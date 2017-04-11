@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_source_report_list"
         android:layout_centerHorizontal="true"
-        android:text="Water Purity Report"/>
+        android:text="@string/all_water_purity_report"/>
 
     <Button
         android:id="@+id/btn_source_report_list"
@@ -18,7 +18,7 @@
         android:layout_below="@+id/textView23"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:text="Water Source Report"/>
+        android:text="@string/all_water_source_report"/>
 
     <Button
         android:id="@+id/btn_water_availability"
@@ -27,10 +27,10 @@
         android:layout_below="@+id/btn_purity_report_list"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
-        android:text="Water Availability Map"/>
+        android:text="@string/all_water_availability_map"/>
 
     <Button
-        android:text="Historical Report"
+        android:text="@string/all_historical_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_historical_report"
@@ -38,7 +38,7 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:text="View Report"
+        android:text="@string/all_view_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
