@@ -20,6 +20,15 @@ public class AccountPermissionTest
 {
 
     /**
+     * Test for illegal null parameter
+     */
+    @Test (expected = IllegalArgumentException.class)
+    public void testNullPermission() {
+        AccountType user = new User();
+        user.hasPermission(null);
+    }
+
+    /**
      * Test for checking User's permission
      */
     @Test

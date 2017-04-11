@@ -29,6 +29,9 @@ public class User implements AccountType
 
     @Override
     public boolean hasPermission(Permission permission) {
+        if (permission == null) {
+            throw new IllegalArgumentException("Cannot have null permission");
+        }
         return this.permissions.contains(permission);
     }
 
