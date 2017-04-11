@@ -1,7 +1,6 @@
 package com.example.m4;
 
 //import com.example.m4.controllers.CreateWaterSourceReportActivity;
-import com.example.m4.models.Models;
 import com.example.m4.models.Report;
 import com.example.m4.models.WaterCondition;
 import com.example.m4.models.WaterSourceReport;
@@ -14,9 +13,6 @@ import java.util.Date;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by theresaming on 4/9/17.
- */
 public class SubmitSourceReportTest {
     private static final int TIMEOUT = 200;
 
@@ -33,7 +29,7 @@ public class SubmitSourceReportTest {
     }
 
     /**
-     * Test for creating a nonvalid source report
+     * Test for creating a non-valid source report
      */
     @Test (timeout = TIMEOUT)
     public void submitInvalidReportTest() {

@@ -14,6 +14,7 @@ import com.example.m4.models.WaterPurityReport;
 import com.example.m4.models.WaterSourceReport;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ViewOneReport extends AppCompatActivity {
 
@@ -42,26 +43,26 @@ public class ViewOneReport extends AppCompatActivity {
         TextView mTV6 = (TextView) findViewById((R.id.textView105));
 
         //set textView to detailed report info
-        mReportNumber.setText(""+ list.get(intValue).getReportNumber());
-        mReporter.setText("" + list.get(intValue).getReporterUsername());
-        mDate.setText("" + list.get(intValue).getDate());
+        mReportNumber.setText(String.format(Locale.US, "%d", list.get(intValue).getReportNumber()));
+        mReporter.setText(list.get(intValue).getReporterUsername());
+        mDate.setText(list.get(intValue).getDate().toString());
         mLocation.setText("" + list.get(intValue).getLongitude() + ", " + list.get(intValue).getLatitude());
 
         //display relevant info according to the report type
         if (list.get(intValue) instanceof WaterSourceReport){
-            mTV1.setText("Water Condition:");
-            mTV2.setText("" + ((WaterSourceReport) list.get(intValue)).getWaterCondition());
-            mTV3.setText("Water Type:");
-            mTV4.setText("" + ((WaterSourceReport) list.get(intValue)).getWaterType());
+            mTV1.setText(getString(R.string.create_water_purity_report_condition));
+            mTV2.setText(((WaterSourceReport) list.get(intValue)).getWaterCondition().toString());
+            mTV3.setText(getString(R.string.create_water_source_report_water_type));
+            mTV4.setText(((WaterSourceReport) list.get(intValue)).getWaterType().toString());
             mTV5.setText("");
             mTV6.setText("");
         } else if (list.get(intValue) instanceof WaterPurityReport){
-            mTV1.setText("Water Condition:");
-            mTV2.setText("" + (((WaterPurityReport) list.get(intValue)).getWaterOverallCondition()));
-            mTV3.setText("Virus PPM:");
-            mTV4.setText("" + (((WaterPurityReport) list.get(intValue)).getVirusPPM()));
-            mTV5.setText("Contaminant PPM:");
-            mTV6.setText("" + (((WaterPurityReport) list.get(intValue)).getContaminantPPM()));
+            mTV1.setText(getString(R.string.create_water_purity_report_condition));
+            mTV2.setText((((WaterPurityReport) list.get(intValue)).getWaterOverallCondition()).toString());
+            mTV3.setText(getString(R.string.create_water_purity_report_virus_ppm));
+            mTV4.setText(String.format(Locale.US, "%f",(((WaterPurityReport) list.get(intValue)).getVirusPPM())));
+            mTV5.setText(getString(R.string.create_water_purity_report_contaminant_ppm));
+            mTV6.setText(String.format(Locale.US, "%f", ((WaterPurityReport) list.get(intValue)).getContaminantPPM()));
         }
     }
 }

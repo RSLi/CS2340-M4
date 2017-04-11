@@ -11,9 +11,7 @@
         android:id="@+id/btn_source_submit"
         android:layout_marginBottom="44dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="53dp"
         android:layout_marginStart="53dp" />
 
     <TextView
@@ -33,7 +31,6 @@
         android:id="@+id/textView26"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_below="@+id/textView28"
-        android:layout_alignLeft="@+id/textView28"
         android:layout_alignStart="@+id/textView28"/>
 
     <TextView
@@ -43,7 +40,6 @@
         android:id="@+id/textView32"
         android:layout_marginBottom="15dp"
         android:layout_above="@+id/edit_longitude"
-        android:layout_alignLeft="@+id/textView38"
         android:layout_alignStart="@+id/textView38" />
 
     <TextView
@@ -53,7 +49,6 @@
         android:id="@+id/textView37"
         android:layout_marginBottom="25dp"
         android:layout_above="@+id/textView32"
-        android:layout_alignLeft="@+id/textView32"
         android:layout_alignStart="@+id/textView32" />
 
     <TextView
@@ -62,7 +57,6 @@
         android:id="@+id/field_source_reporter"
         android:layout_alignBaseline="@+id/textView37"
         android:layout_alignBottom="@+id/textView37"
-        android:layout_alignLeft="@+id/field_source_num"
         android:layout_alignStart="@+id/field_source_num"
         android:text="@string/all_placeholder_name" />
 
@@ -72,7 +66,6 @@
         android:text="@string/all_placeholder_num"
         android:layout_alignBaseline="@+id/textView32"
         android:layout_alignBottom="@+id/textView32"
-        android:layout_alignLeft="@+id/edit_longitude"
         android:layout_alignStart="@+id/edit_longitude"
         android:layout_height="wrap_content" />
 
@@ -83,7 +76,6 @@
         android:text="@string/all_date_time"
         android:layout_alignBaseline="@+id/textView40"
         android:layout_alignBottom="@+id/textView40"
-        android:layout_alignLeft="@+id/edit_longitude"
         android:layout_alignStart="@+id/edit_longitude" />
 
     <Spinner
@@ -91,7 +83,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner_water_type"
         android:layout_alignTop="@+id/textView41"
-        android:layout_alignLeft="@+id/field_date_time"
         android:layout_alignStart="@+id/field_date_time" />
 
     <Spinner
@@ -99,7 +90,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner_condition"
         android:layout_below="@+id/textView41"
-        android:layout_alignLeft="@+id/spinner_water_type"
         android:layout_alignStart="@+id/spinner_water_type" />
 
     <TextView
@@ -109,7 +99,6 @@
         android:id="@+id/textView42"
         android:layout_marginBottom="40dp"
         android:layout_above="@+id/btn_source_submit"
-        android:layout_alignLeft="@+id/textView41"
         android:layout_alignStart="@+id/textView41" />
 
     <Button
@@ -120,7 +109,6 @@
         tools:text="Cancel"
         android:layout_alignBaseline="@+id/btn_source_submit"
         android:layout_alignBottom="@+id/btn_source_submit"
-        android:layout_alignRight="@+id/edit_longitude"
         android:layout_alignEnd="@+id/edit_longitude" />
 
     <EditText
@@ -133,7 +121,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView38"
         android:layout_alignBottom="@+id/textView38"
-        android:layout_toRightOf="@+id/btn_source_submit"
         android:layout_toEndOf="@+id/btn_source_submit" />
 
     <TextView
@@ -143,7 +130,6 @@
         android:id="@+id/textView41"
         android:layout_marginBottom="22dp"
         android:layout_above="@+id/textView42"
-        android:layout_alignLeft="@+id/textView40"
         android:layout_alignStart="@+id/textView40" />
 
     <TextView
@@ -153,7 +139,6 @@
         android:id="@+id/textView40"
         android:layout_marginBottom="20dp"
         android:layout_above="@+id/textView41"
-        android:layout_toLeftOf="@+id/textView28"
         android:layout_toStartOf="@+id/textView28" />
 
     <TextView
@@ -161,7 +146,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView40"
-        android:layout_alignLeft="@+id/textView40"
         android:layout_alignStart="@+id/textView40"
         android:layout_marginBottom="55dp"
         android:text="@string/all_longitude" />
@@ -170,7 +154,6 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView38"
         android:layout_alignStart="@+id/textView38"
         android:layout_centerVertical="true"
         android:text="@string/all_latitude" />
@@ -185,7 +168,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView21"
         android:layout_alignBottom="@+id/textView21"
-        android:layout_alignLeft="@+id/edit_longitude"
         android:layout_alignStart="@+id/edit_longitude" />
 
 </RelativeLayout>

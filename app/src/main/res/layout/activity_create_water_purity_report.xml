@@ -10,7 +10,6 @@
         android:id="@+id/textView4"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
 
     <TextView
@@ -30,7 +29,6 @@
         android:id="@+id/textView6"
         android:layout_marginBottom="30dp"
         android:layout_above="@+id/textView8"
-        android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8" />
 
     <TextView
@@ -40,7 +38,6 @@
         android:id="@+id/textView5"
         android:layout_marginBottom="29dp"
         android:layout_above="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
         android:layout_alignStart="@+id/textView6" />
 
     <TextView
@@ -49,7 +46,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView12"
         android:layout_below="@+id/TextView33"
-        android:layout_alignLeft="@+id/btn_purity_submit"
         android:layout_alignStart="@+id/btn_purity_submit"
         android:layout_marginTop="27dp" />
 
@@ -58,7 +54,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/field_purity_reporter"
         android:layout_alignStart="@+id/field_purity_reporter"
         android:id="@+id/field_purity_num" />
 
@@ -72,9 +67,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/TextView33"
         android:layout_alignBottom="@+id/TextView33"
-        android:layout_toRightOf="@+id/btn_purity_submit"
         android:layout_toEndOf="@+id/btn_purity_submit"
-        android:layout_marginLeft="11dp"
         android:layout_marginStart="11dp" />
 
     <TextView
@@ -84,7 +77,6 @@
         android:id="@+id/field_purity_reporter"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
-        android:layout_toRightOf="@+id/textView12"
         android:layout_toEndOf="@+id/textView12" />
 
     <TextView
@@ -100,7 +92,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner_water_overall_condition"
         android:layout_alignTop="@+id/textView9"
-        android:layout_toRightOf="@+id/btn_purity_submit"
         android:layout_toEndOf="@+id/btn_purity_submit" />
 
     <EditText
@@ -113,14 +104,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView12"
         android:layout_alignBottom="@+id/textView12"
-        android:layout_toRightOf="@+id/field_purity_num"
         android:layout_toEndOf="@+id/field_purity_num" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView7"
         android:layout_alignStart="@+id/textView7"
         android:layout_below="@+id/textView7"
         android:layout_marginTop="19dp"
@@ -135,7 +124,6 @@
         android:labelFor="@+id/edit_latitude"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_below="@+id/edit_longitude"
-        android:layout_alignLeft="@+id/edit_longitude"
         android:layout_alignStart="@+id/edit_longitude" />
 
     <EditText
@@ -148,7 +136,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
-        android:layout_alignLeft="@+id/edit_Virus_PPm"
         android:layout_alignStart="@+id/edit_Virus_PPm" />
 
     <Button
@@ -157,7 +144,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_purity_submit"
         android:layout_below="@+id/edit_contaminant_PPM"
-        android:layout_toLeftOf="@+id/textView4"
         android:layout_toStartOf="@+id/textView4"
         android:layout_marginTop="12dp" />
 
@@ -168,7 +154,6 @@
         android:layout_marginTop="18dp"
         android:id="@+id/TextView33"
         android:layout_below="@+id/spinner_water_overall_condition"
-        android:layout_alignLeft="@+id/textView12"
         android:layout_alignStart="@+id/textView12" />
 
     <Button
@@ -179,7 +164,6 @@
         tools:text="Cancel"
         android:layout_alignBaseline="@+id/btn_purity_submit"
         android:layout_alignBottom="@+id/btn_purity_submit"
-        android:layout_alignRight="@+id/edit_Virus_PPm"
         android:layout_alignEnd="@+id/edit_Virus_PPm"/>
 
     <TextView
@@ -188,7 +172,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView9"
         android:layout_below="@+id/edit_latitude"
-        android:layout_alignLeft="@+id/TextView33"
         android:layout_alignStart="@+id/TextView33"
         android:layout_marginTop="12dp" />
 
@@ -205,7 +188,6 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="162dp"

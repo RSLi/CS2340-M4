@@ -26,9 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView10"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_marginRight="47dp"
         android:layout_marginEnd="47dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/view" />
 
@@ -38,7 +36,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_view_report"
         android:layout_below="@+id/btn_create_report"
-        android:layout_alignLeft="@+id/btn_user_profile"
         android:layout_alignStart="@+id/btn_user_profile" />
 
     <Button
