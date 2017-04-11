@@ -20,18 +20,16 @@ import static org.junit.Assert.assertTrue;
 
 
 public class RegisterTest {
-    private String validPassword;
-    private String validUsername;
     private AccountType accountType;
 
 
     /**
-     *
+     * Initialize
      */
     @Before
     public void initialize() {
-        validPassword = "aaaa8888";
-        validUsername = "helo";
+        String validPassword = "aaaa8888";
+        String validUsername = "helo";
         accountType = new Worker();
         accountType.setUsername(validUsername);
         accountType.setPassword(validPassword);
@@ -47,21 +45,25 @@ public class RegisterTest {
      */
     @Test
     public void testNullUserName() {
-        String username = null;
-        accountType.setUsername(username);
+        accountType.setUsername(null);
         assertFalse(Models.register(accountType));
     }
 
+    /**
+     * test for empty username
+     */
     @Test
     public void testEmptyStringUserName() {
         String username = "";
         accountType.setUsername(username);
         assertFalse(Models.register(accountType));
     }
-
+    /**
+     * test for overlength username
+     */
     @Test
     public void testBigUserName() {
-        StringBuffer s = new StringBuffer();
+        StringBuilder s = new StringBuilder();
         for (int i = 0; i < 1000; i++) {
             s.append(" ");
         }
@@ -70,6 +72,9 @@ public class RegisterTest {
         assertFalse(Models.register(accountType));
     }
 
+    /**
+     * test for small username
+     */
     @Test
     public void testSmallUserName() {
         String username = " ";
@@ -78,6 +83,9 @@ public class RegisterTest {
         assertFalse(Models.register(accountType));
     }
 
+    /**
+     * test for null passwords
+     */
     @Test
     public void testNullPassword() {
         String password = " ";
@@ -86,7 +94,9 @@ public class RegisterTest {
         assertFalse(Models.register(accountType));
     }
 
-
+    /**
+     * test for empty string password
+     */
     @Test
     public void testEmptyStringPassword() {
         String password = "";
@@ -94,9 +104,12 @@ public class RegisterTest {
         assertFalse(Models.register(accountType));
     }
 
+    /**
+     * test Big Password
+     */
     @Test
     public void testBigPassword() {
-        StringBuffer s = new StringBuffer();
+        StringBuilder s = new StringBuilder();
         for (int i = 0; i < 1000; i++) {
             s.append(" ");
         }
@@ -105,6 +118,9 @@ public class RegisterTest {
         assertFalse(Models.register(accountType));
     }
 
+    /**
+     * test small Password
+     */
     @Test
     public void testSmallPassword() {
         String password = " ";
