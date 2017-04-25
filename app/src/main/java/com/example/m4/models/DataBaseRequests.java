@@ -80,7 +80,7 @@ public class DataBaseRequests {
                                 newAccount.setProfileData(profile);
 
 
-                                //boolean registerSuccess = Models.register(newAccount);
+                                boolean registerSuccess = Models.register(newAccount);
 
                             }
 

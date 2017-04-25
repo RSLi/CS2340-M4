@@ -23,19 +23,19 @@ public class Models
      */
     @SuppressWarnings("SameReturnValue")
     public static boolean register(AccountType newAccount) {
-        if (newAccount.getUsername() == null) {
-            return false;
-        } else if (newAccount.getPassword() == null) {
-            return false;
-        } else if (newAccount.getUsername().length() > 20) {
-            return false;
-        } else if (newAccount.getPassword().length() > 20) {
-            return false;
-        } else if (newAccount.getUsername().length() < 4) {
-            return false;
-        } else if (newAccount.getPassword().length() < 8) {
-            return false;
-        }
+//        if (newAccount.getUsername() == null) {
+//            return false;
+//        } else if (newAccount.getPassword() == null) {
+//            return false;
+//        } else if (newAccount.getUsername().length() > 20) {
+//            return false;
+//        } else if (newAccount.getPassword().length() > 20) {
+//            return false;
+//        } else if (newAccount.getUsername().length() < 4) {
+//            return false;
+//        } else if (newAccount.getPassword().length() < 8) {
+//            return false;
+//        }
         localAccounts.put(newAccount.getUsername(),newAccount);
         return true;
     }
