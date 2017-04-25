@@ -16,8 +16,6 @@ public class MainAppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_app);
-        ImageView imageView = (ImageView) findViewById(R.id.image);
-        imageView.setImageResource(R.drawable.bg1);
 
         Button mBtnUserProfile = (Button) findViewById(R.id.btn_user_profile);
         Button mBtnLogout = (Button) findViewById(R.id.button_logout);
