@@ -11,7 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:fitsSystemWindows="true"
     android:background="@drawable/bg11"
-    android:theme="@style/no_title"
     tools:context="com.example.m4.controllers.WelcomeActivity">
 
 
