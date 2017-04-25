@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView28"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="39dp"
         android:text="@string/create_water_purity_report_title_1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="@string/create_watter_source_report_title_2"
@@ -33,25 +33,25 @@
         android:id="@+id/textView26"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_below="@+id/textView28"
-        android:layout_alignStart="@+id/textView28"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="@string/all_report_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView32"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="18dp"
         android:layout_above="@+id/edit_longitude"
-        android:layout_alignStart="@+id/textView38" />
+        android:layout_alignStart="@+id/textView37" />
 
     <TextView
         android:text="@string/all_reporter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView37"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="23dp"
         android:layout_above="@+id/textView32"
-        android:layout_alignStart="@+id/textView32" />
+        android:layout_alignStart="@+id/textView38" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,18 +141,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView40"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/textView41"
-        android:layout_toStartOf="@+id/textView28" />
+        android:layout_below="@+id/edit_latitude"
+        android:layout_toStartOf="@+id/textView26"
+        android:layout_marginTop="27dp" />
 
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView40"
-        android:layout_alignStart="@+id/textView40"
-        android:layout_marginBottom="55dp"
-        android:text="@string/all_longitude" />
+        android:layout_marginBottom="27dp"
+        android:text="@string/all_longitude"
+        android:layout_above="@+id/edit_latitude"
+        android:layout_alignStart="@+id/textView40" />
 
     <TextView
         android:id="@+id/textView21"

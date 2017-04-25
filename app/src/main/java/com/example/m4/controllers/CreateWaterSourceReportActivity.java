@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +28,11 @@ public class CreateWaterSourceReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_water_source_report);
+        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        TextView text1 = (TextView) findViewById(R.id.textView26);
+        text1.startAnimation(animation);
+        TextView text2 = (TextView) findViewById(R.id.textView28);
+        text2.startAnimation(animation);
 
         //get buttons
         Button btnSourceReportSubmit = (Button) findViewById(R.id.btn_source_submit);

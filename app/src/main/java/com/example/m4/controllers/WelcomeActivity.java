@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.m4.R;
 import com.example.m4.models.DataBaseRequests;
@@ -15,6 +18,10 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade_in_wel);
+        TextView welcometext = (TextView) findViewById(R.id.textView);
+        welcometext.startAnimation(animation);
+
         //get buttons
         Button btnGotoLogin = (Button)findViewById(R.id.btn_goto_login);
         Button btnGotoRegistration = (Button)findViewById(R.id.btn_goto_registration);

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +30,11 @@ public class CreateWaterPurityReportActivity extends AppCompatActivity {
         //get buttons
         Button btnPurityReportSubmit = (Button)findViewById(R.id.btn_purity_submit);
         Button btnPurityReportCancel = (Button)findViewById(R.id.btn_purity_cancel);
+        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        TextView text1 = (TextView) findViewById(R.id.textView4);
+        text1.startAnimation(animation);
+        TextView text2 = (TextView) findViewById(R.id.textView6);
+        text2.startAnimation(animation);
 
         //set up spinner to show the water over conditions
         final Spinner spWaterOverallCondition = (Spinner)findViewById(R.id.spinner_water_overall_condition);
