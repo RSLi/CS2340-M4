@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg5"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
@@ -143,9 +144,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_purity_submit"
-        android:layout_below="@+id/edit_contaminant_PPM"
-        android:layout_toStartOf="@+id/textView4"
-        android:layout_marginTop="12dp" />
+        android:background="#A0FFFFFF"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView4" />
 
     <TextView
         android:text="@string/create_water_purity_report_virus_ppm"
@@ -162,9 +164,9 @@
         android:layout_height="wrap_content"
         android:text="@string/all_cancel"
         tools:text="Cancel"
-        android:layout_alignBaseline="@+id/btn_purity_submit"
+        android:background="#A0FFFFFF"
         android:layout_alignBottom="@+id/btn_purity_submit"
-        android:layout_alignEnd="@+id/edit_Virus_PPm"/>
+        android:layout_toEndOf="@+id/textView4" />
 
     <TextView
         android:text="@string/create_water_purity_report_condition"

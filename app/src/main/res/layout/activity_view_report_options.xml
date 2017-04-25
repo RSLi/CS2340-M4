@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg12"
+
     android:layout_height="match_parent">
 
     <Button
         android:id="@+id/btn_purity_report_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#A0FFFFFF"
+        android:text="@string/all_water_purity_report"
         android:layout_below="@+id/btn_source_report_list"
-        android:layout_centerHorizontal="true"
-        android:text="@string/all_water_purity_report"/>
+        android:layout_marginTop="12dp"
+        android:layout_alignEnd="@+id/btn_water_availability"
+        android:layout_alignStart="@+id/btn_source_report_list" />
 
     <Button
         android:id="@+id/btn_source_report_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView23"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:text="@string/all_water_source_report"/>
+        android:background="#A0FFFFFF"
+        android:text="@string/all_water_source_report"
+        android:layout_alignStart="@+id/btn_water_availability"
+        android:layout_alignEnd="@+id/btn_water_availability" />
 
     <Button
         android:id="@+id/btn_water_availability"
@@ -27,6 +34,7 @@
         android:layout_below="@+id/btn_purity_report_list"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
+        android:background="#A0FFFFFF"
         android:text="@string/all_water_availability_map"/>
 
     <Button
@@ -34,8 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_historical_report"
+        android:background="#A0FFFFFF"
         android:layout_below="@+id/btn_water_availability"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/btn_water_availability"
+        android:layout_alignEnd="@+id/btn_water_availability" />
 
     <TextView
         android:text="@string/all_view_report"

@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/bg12"
+
     tools:context="com.example.m4.controllers.ViewSourceReportListActivity">
 
     <RelativeLayout

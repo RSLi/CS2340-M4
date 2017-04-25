@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.m4.R;
 import com.example.m4.models.Models;
@@ -15,6 +16,8 @@ public class MainAppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_app);
+        ImageView imageView = (ImageView) findViewById(R.id.image);
+        imageView.setImageResource(R.drawable.bg1);
 
         Button mBtnUserProfile = (Button) findViewById(R.id.btn_user_profile);
         Button mBtnLogout = (Button) findViewById(R.id.button_logout);

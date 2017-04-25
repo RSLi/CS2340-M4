@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg1"
     android:id="@+id/activity_main_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,33 +36,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_view_report"
-        android:layout_below="@+id/btn_create_report"
-        android:layout_alignStart="@+id/btn_user_profile" />
+        android:background="#A0FFFFFF"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/btn_create_report"
+        android:layout_alignEnd="@+id/btn_create_report" />
 
     <Button
         android:text="@string/all_user_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_user_profile"
+        android:background="#A0FFFFFF"
+        android:layout_marginTop="11dp"
         android:layout_below="@+id/btn_view_report"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/btn_view_report"
+        android:layout_alignEnd="@+id/btn_view_report" />
 
     <Button
         android:text="@string/action_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_logout"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/btn_view_report"
-        android:layout_centerHorizontal="true" />
+        android:background="#A0FFFFFF"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/btn_user_profile"
+        android:layout_alignStart="@+id/btn_user_profile"
+        android:layout_alignEnd="@+id/btn_user_profile" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_create_report"
         android:text="@string/all_create_report"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/textView10"
-        android:layout_centerHorizontal="true" />
+        android:background="#A0FFFFFF"
+        android:layout_above="@+id/btn_view_report"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>

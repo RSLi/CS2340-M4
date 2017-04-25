@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg12"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <Button
@@ -10,6 +11,7 @@
         android:layout_below="@+id/spinner_year"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:background="#A0FFFFFF"
         android:text="@string/all_submit" />
 
     <TextView

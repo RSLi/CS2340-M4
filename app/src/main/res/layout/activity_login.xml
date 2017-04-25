@@ -8,7 +8,9 @@
               android:paddingLeft="@dimen/activity_horizontal_margin"
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context="com.example.m4.controllers.LoginActivity">
+    android:background="@drawable/bg11"
+
+    tools:context="com.example.m4.controllers.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -70,13 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in_short"
+                android:background="#A0FFFFFF"
                 android:textStyle="bold"/>
-
-            <Button
-                android:text="@string/all_cancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_cancelLogin" />
 
         </LinearLayout>
     </ScrollView>

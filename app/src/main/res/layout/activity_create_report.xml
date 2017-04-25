@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg5"
     android:layout_height="match_parent">
 
     <TextView
@@ -18,10 +19,12 @@
         android:text="@string/create_report_btn_water_source_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="119dp"
+        android:background="#A0FFFFFF"
+        android:id="@+id/btn_create_water_source_report"
         android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:id="@+id/btn_create_water_source_report" />
+        android:layout_alignEnd="@+id/btn_create_water_purity_report"
+        android:layout_alignStart="@+id/btn_create_water_purity_report" />
 
     <Button
         android:text="@string/create_report_btn_water_purity_report"
@@ -29,17 +32,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_create_water_purity_report"
         android:layout_marginTop="19dp"
+        android:background="#A0FFFFFF"
         android:layout_below="@+id/btn_create_water_source_report"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="@string/all_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_cancel"
-        android:layout_below="@+id/btn_create_water_purity_report"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        tools:text="Cancel" />
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
 
 </RelativeLayout>
