@@ -65,4 +65,9 @@
     <string name="all_historical_report">Historical Report</string>
     <string name="all_welcome">Welcome!</string>
     <string name="facebook_app_id">Facebook App ID</string>
+    <string name="auto_location">auto</string>
+    <string name="title_create_report">Create Report</string>
+    <string name="message_create_report">Create Report User Current Location</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
 </resources>

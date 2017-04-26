@@ -1,7 +1,10 @@
 package com.example.m4.controllers;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 
 import com.example.m4.R;
 import com.example.m4.models.WaterSourceReport;
@@ -56,5 +59,43 @@ public class ViewReportsMapActivity extends FragmentActivity implements OnMapRea
                 googleMap.addMarker(new MarkerOptions().position(location).title("" + ((WaterSourceReport) r).getWaterType() + ", " + ((WaterSourceReport) r).getWaterCondition()));
             }
         }
+
+        googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(LatLng latLng) {
+                showCreateReportDialog(latLng);
+            }
+        });
     }
+
+    private void showCreateReportDialog(final LatLng latLng) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.title_create_report)
+                .setMessage(R.string.message_create_report)
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //save selected location
+                        sLocationCache = latLng;
+                        //start CreateReportActivity
+                        Intent intent = new Intent(ViewReportsMapActivity.this,
+                                CreateReportActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                }).setNegativeButton(R.string.cancel, null);
+        builder.show();
+    }
+
+    private static LatLng sLocationCache = null;
+
+    public static LatLng getLocationCache() {
+        LatLng res = null;
+        if (sLocationCache != null) {
+            res = sLocationCache;
+            sLocationCache = null;
+        }
+        return res;
+    }
+
 }
