@@ -64,4 +64,5 @@
     <string name="all_water_availability_map">Water Availability Map</string>
     <string name="all_historical_report">Historical Report</string>
     <string name="all_welcome">Welcome!</string>
+    <string name="facebook_app_id">Facebook App ID</string>
 </resources>
