@@ -129,14 +129,13 @@
 
     <Button
         android:id="@+id/btn_auto_location"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/edit_longitude"
-        android:background="#A0FFFFFF"
-        android:layout_alignBaseline="@+id/textView38"
-        android:layout_alignBottom="@+id/textView38"
-        android:layout_marginStart="6dp"
-        android:text="@string/auto_location"/>
+        android:background="@android:drawable/ic_menu_mylocation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_alignTop="@+id/edit_longitude"
+        android:layout_toEndOf="@+id/edit_longitude" />
 
     <TextView
         android:text="@string/create_water_source_report_water_type"
